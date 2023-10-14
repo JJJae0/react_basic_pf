@@ -1,4 +1,3 @@
-import Layout from '../../common/layout/Layout';
 import Modal from '../../common/modal/Modal';
 import './Gallery.scss';
 import { useState, useEffect, useRef } from 'react';
@@ -94,68 +93,65 @@ export default function Gallery() {
 
 	return (
 		<>
-			<Layout title={'Gallery'}>
-				<div className='searchBox'>
-					<form onSubmit={handleSubmit}>
-						<input
-							ref={refInput}
-							type='text'
-							placeholder='검색어를 입력하세요'
-						/>
-						<button>검색</button>
-					</form>
+			<div className='searchBox'>
+				<div>
+					<p>Gallery</p>
 				</div>
+				<form onSubmit={handleSubmit}>
+					<input ref={refInput} type='text' placeholder='검색어를 입력하세요' />
+					<button>검색</button>
+				</form>
+			</div>
 
-				<div className='btnSet' ref={refBtnSet}>
-					<button className='on' onClick={handleClickMy}>
-						My Gallery
-					</button>
+			<div className='btnSet' ref={refBtnSet}>
+				<button className='on' onClick={handleClickMy}>
+					My Gallery
+				</button>
 
-					<button onClick={handleClickInterest}>Interest Gallery</button>
-				</div>
+				<button onClick={handleClickInterest}>Interest Gallery</button>
+			</div>
 
-				<div className='picFrame'>
-					<Masonry
-						elementType={'div'}
-						options={{ transitionDuration: '0.5s' }}
-						disableImagesLoaded={false}
-						updateOnEachImageLoad={false}
-					>
-						{Pics.map((data, idx) => {
-							return (
-								<article key={idx}>
-									<div className='inner'>
+			<div className='picFrame'>
+				<Masonry
+					elementType={'div'}
+					options={{ transitionDuration: '0.5s' }}
+					disableImagesLoaded={false}
+					updateOnEachImageLoad={false}
+				>
+					{Pics.map((data, idx) => {
+						return (
+							<article key={idx}>
+								<div className='inner'>
+									<img
+										className='pic'
+										src={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_m.jpg`}
+										alt={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`}
+										onClick={(e) => {
+											setActiveURL(e.target.getAttribute('alt'));
+											setIsModal(true);
+										}}
+									/>
+									<h2>{data.title}</h2>
+
+									<div className='profile'>
 										<img
-											className='pic'
-											src={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_m.jpg`}
-											alt={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`}
-											onClick={(e) => {
-												setActiveURL(e.target.getAttribute('alt'));
-												setIsModal(true);
+											src={`http://farm${data.farm}.staticflickr.com/${data.server}/buddyicons/${data.owner}.jpg`}
+											alt={data.owner}
+											onError={(e) => {
+												e.target.setAttribute(
+													'src',
+													'https://www.flickr.com/images/buddyicon.gif'
+												);
 											}}
 										/>
-										<h2>{data.title}</h2>
-
-										<div className='profile'>
-											<img
-												src={`http://farm${data.farm}.staticflickr.com/${data.server}/buddyicons/${data.owner}.jpg`}
-												alt={data.owner}
-												onError={(e) => {
-													e.target.setAttribute(
-														'src',
-														'https://www.flickr.com/images/buddyicon.gif'
-													);
-												}}
-											/>
-											<span onClick={handleClickProfile}>{data.owner}</span>
-										</div>
+										<span onClick={handleClickProfile}>{data.owner}</span>
 									</div>
-								</article>
-							);
-						})}
-					</Masonry>
-				</div>
-			</Layout>
+								</div>
+							</article>
+						);
+					})}
+				</Masonry>
+			</div>
 
 			{IsModal && (
 				<Modal setIsModal={setIsModal}>
