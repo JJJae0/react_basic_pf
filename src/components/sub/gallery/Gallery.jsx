@@ -7,10 +7,30 @@ export default function Gallery() {
 	return (
 		<>
 			<div className='Box'>
-				<div className='Box1'></div>
-				<div className='Box2'></div>
-				<div className='Box3'></div>
-				<div className='Box4'></div>
+				<div className='Box1'>
+					<div className='subBox1'></div>
+					<p className='subTitle1'>REST</p>
+					<div className='Line1'></div>
+					<div className='Gradation1'></div>
+				</div>
+				<div className='Box2'>
+					<div className='subBox2'></div>
+					<p className='subTitle2'>MENU SPACE</p>
+					<div className='Line2'></div>
+					<div className='Gradation2'></div>
+				</div>
+				<div className='Box3'>
+					<div className='subBox3'></div>
+					<p className='subTitle3'>EAVE SOFA</p>
+					<div className='Line3'></div>
+					<div className='Gradation3'></div>
+				</div>
+				<div className='Box4'>
+					<div className='subBox4'></div>
+					<p className='subTitle4'>PH HOUSE</p>
+					<div className='Line4'></div>
+					<div className='Gradation4'></div>
+				</div>
 			</div>
 		</>
 	);

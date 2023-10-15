@@ -1,4 +1,5 @@
 // @import '../../../styles/Variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@500&display=swap');
 
 .Box {
 	display: flex;
@@ -11,7 +12,42 @@
 		background-color: beige;
 		margin-left: 45px;
 		margin-top: 6rem;
-		box-shadow: 0.7px 0.7px 0.7px 0.7px gray;
+		box-shadow: 2px 3px 5px 2px gray;
+		position: relative;
+		.subBox1 {
+			top: 40%;
+			left: 13.5%;
+			position: absolute;
+			width: 20rem;
+			height: 30rem;
+			background-color: rgb(244, 244, 244);
+			box-shadow: 2px 3px 5px 2px rgb(235, 185, 185);
+		}
+		.subTitle1 {
+			font-family: 'Onest';
+			font-size: 3rem;
+			margin-top: 2rem;
+			margin-left: 2rem;
+			text-align: left;
+		}
+		.Line1 {
+			position: absolute;
+			margin-left: 3rem;
+			top: 26%;
+			width: 21rem;
+			height: 0.1rem;
+			background-color: gray;
+		}
+		.Gradation1 {
+			position: absolute;
+			width: 21rem;
+			height: 1rem;
+			background-image: linear-gradient(to right, #e9e9dd, #c4bab1);
+			transition: width 0.5s ease-in-out;
+			border-radius: 5px;
+			top: 28%;
+			left: 11%;
+		}
 	}
 	.Box2 {
 		top: 20%;
@@ -20,7 +56,42 @@
 		background-color: beige;
 		margin-left: 45px;
 		margin-top: 6rem;
-		box-shadow: 0.7px 0.7px 0.7px 0.7px gray;
+		box-shadow: 2px 3px 5px 2px gray;
+
+		.subBox2 {
+			top: 48%;
+			left: 33%;
+			position: absolute;
+			width: 20rem;
+			height: 27rem;
+			background-color: rgb(244, 244, 244);
+			box-shadow: 2px 3px 5px 2px rgb(235, 185, 185);
+		}
+		.subTitle2 {
+			font-family: 'Onest';
+			font-size: 3rem;
+			margin-top: 2rem;
+			margin-left: 2rem;
+			text-align: left;
+		}
+		.Line2 {
+			position: absolute;
+			margin-left: 3rem;
+			top: 34%;
+			width: 21rem;
+			height: 0.1rem;
+			background-color: gray;
+		}
+		.Gradation2 {
+			position: absolute;
+			width: 21rem;
+			height: 1rem;
+			background-image: linear-gradient(to right, #e9e9dd, #b39d87);
+			transition: width 0.5s ease-in-out;
+			border-radius: 5px;
+			top: 35.5%;
+			left: 32.7%;
+		}
 	}
 	.Box3 {
 		top: 20%;
@@ -29,7 +100,42 @@
 		background-color: beige;
 		margin-left: 45px;
 		margin-top: 6rem;
-		box-shadow: 0.7px 0.7px 0.7px 0.7px gray;
+		box-shadow: 2px 3px 5px 2px gray;
+
+		.subBox3 {
+			top: 44%;
+			left: 55%;
+			position: absolute;
+			width: 20rem;
+			height: 30rem;
+			background-color: rgb(244, 244, 244);
+			box-shadow: 2px 3px 5px 2px rgb(235, 185, 185);
+		}
+		.subTitle3 {
+			font-family: 'Onest';
+			font-size: 3rem;
+			margin-top: 2rem;
+			margin-left: 2rem;
+			text-align: left;
+		}
+		.Line3 {
+			position: absolute;
+			margin-left: 3rem;
+			top: 34%;
+			width: 21rem;
+			height: 0.1rem;
+			background-color: gray;
+		}
+		.Gradation3 {
+			position: absolute;
+			width: 21rem;
+			height: 1rem;
+			background-image: linear-gradient(to right, #e9e9dd, #a98f76);
+			transition: width 0.5s ease-in-out;
+			border-radius: 5px;
+			top: 35.5%;
+			left: 54.7%;
+		}
 	}
 	.Box4 {
 		top: 20%;
@@ -38,7 +144,42 @@
 		background-color: beige;
 		margin-left: 45px;
 		margin-top: 6rem;
-		box-shadow: 0.7px 0.7px 0.7px 0.7px gray;
+		box-shadow: 2px 3px 5px 2px gray;
+
+		.subBox4 {
+			top: 48%;
+			left: 77.3%;
+			position: absolute;
+			width: 20rem;
+			height: 27rem;
+			background-color: rgb(244, 244, 244);
+			box-shadow: 2px 3px 5px 2px rgb(235, 185, 185);
+		}
+		.subTitle4 {
+			font-family: 'Onest';
+			font-size: 3rem;
+			margin-top: 2rem;
+			margin-left: 2rem;
+			text-align: left;
+		}
+		.Line4 {
+			position: absolute;
+			margin-left: 3rem;
+			top: 34%;
+			width: 21rem;
+			height: 0.1rem;
+			background-color: gray;
+		}
+		.Gradation4 {
+			position: absolute;
+			width: 21rem;
+			height: 1rem;
+			background-image: linear-gradient(to right, #e9e9dd, #be956b);
+			transition: width 0.5s ease-in-out;
+			border-radius: 5px;
+			top: 35.5%;
+			left: 76.7%;
+		}
 	}
 }
 // .Gallery {
@@ -109,3 +250,5 @@
 // 		}
 // 	}
 // }
+
+// 13.5 + 6
