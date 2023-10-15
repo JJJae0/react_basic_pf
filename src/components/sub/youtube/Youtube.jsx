@@ -7,14 +7,11 @@ export default function Youtube() {
 		<>
 			<div className='Main'>
 				<div className='layoutBox'>
+					<div className='Line'></div>
 					<div className='Title'>
-						<p className='title'>Youtube Playlist </p>
-						<p className='title3'>
-							𝐋𝐚𝐮𝐯, 𝐋𝐚𝐧𝐲, <br />
-							𝐇𝐨𝐧𝐧𝐞,𝐇𝐨𝐧𝐧𝐞, <br />
-							𝐤𝐞𝐬𝐡𝐢, 𝐏𝐞𝐝𝐞𝐫 𝐄𝐥𝐢𝐚𝐬, <br />
-							𝐓𝐫𝐨𝐲𝐞 𝐒𝐢𝐯𝐚𝐧, <br />
-							𝐂𝐡𝐚𝐫𝐥𝐢𝐞 𝐏𝐮𝐭𝐡
+						<p className='title'>
+							The strength <br />
+							of our company
 						</p>
 						<p className='title2'>
 							Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
@@ -22,6 +19,10 @@ export default function Youtube() {
 							<br />
 							Beatae quod, suscipit cumque labore doloribus
 						</p>
+						<div className='Button'>
+							<button className='button1'>{`<`}</button>
+							<button className='button2'>{`>`}</button>
+						</div>
 					</div>
 					<div className='MainBox'>
 						<div className='box1'></div>

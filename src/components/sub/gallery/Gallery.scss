@@ -1,70 +1,111 @@
-@import '../../../styles/Variable.scss';
+// @import '../../../styles/Variable.scss';
 
-.Gallery {
-	&::after {
-		content: '';
-		display: block;
-		clear: both;
+.Box {
+	display: flex;
+	justify-content: center;
+
+	.Box1 {
+		top: 20%;
+		width: 27rem;
+		height: 55rem;
+		background-color: beige;
+		margin-left: 45px;
+		margin-top: 6rem;
+		box-shadow: 0.7px 0.7px 0.7px 0.7px gray;
 	}
-
-	article {
-		width: 25%;
-		padding: 10px;
-		float: left;
-
-		.inner {
-			width: 100%;
-			padding: 10px;
-			background: #fff;
-			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
-
-			.pic {
-				width: 100%;
-			}
-			h2 {
-				font: normal 1rem/1.2 'arial';
-				color: #555;
-				margin-top: 10px;
-				margin-bottom: 40px;
-			}
-			.profile {
-				width: 100%;
-				display: flex;
-				align-items: center;
-				gap: 20px;
-			}
-			span {
-				font-size: 0.8rem;
-			}
-		}
+	.Box2 {
+		top: 20%;
+		width: 27rem;
+		height: 55rem;
+		background-color: beige;
+		margin-left: 45px;
+		margin-top: 6rem;
+		box-shadow: 0.7px 0.7px 0.7px 0.7px gray;
 	}
-
-	@media screen and (max-width: $labtop) {
-		.Gallery {
-			.picFrame {
-				article {
-					width: 33.333%;
-				}
-			}
-		}
+	.Box3 {
+		top: 20%;
+		width: 27rem;
+		height: 55rem;
+		background-color: beige;
+		margin-left: 45px;
+		margin-top: 6rem;
+		box-shadow: 0.7px 0.7px 0.7px 0.7px gray;
 	}
-
-	@media screen and (max-width: $tablet) {
-		.Gallery {
-			.picFrame {
-				article {
-					width: 50%;
-				}
-			}
-		}
-	}
-	@media screen and (max-width: $mobile) {
-		.Gallery {
-			.picFrame {
-				article {
-					width: 100%;
-				}
-			}
-		}
+	.Box4 {
+		top: 20%;
+		width: 27rem;
+		height: 55rem;
+		background-color: beige;
+		margin-left: 45px;
+		margin-top: 6rem;
+		box-shadow: 0.7px 0.7px 0.7px 0.7px gray;
 	}
 }
+// .Gallery {
+// 	&::after {
+// 		content: '';
+// 		display: block;
+// 		clear: both;
+// 	}
+
+// 	article {
+// 		width: 25%;
+// 		padding: 10px;
+// 		float: left;
+
+// 		.inner {
+// 			width: 100%;
+// 			padding: 10px;
+// 			background: #fff;
+// 			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+
+// 			.pic {
+// 				width: 100%;
+// 			}
+// 			h2 {
+// 				font: normal 1rem/1.2 'arial';
+// 				color: #555;
+// 				margin-top: 10px;
+// 				margin-bottom: 40px;
+// 			}
+// 			.profile {
+// 				width: 100%;
+// 				display: flex;
+// 				align-items: center;
+// 				gap: 20px;
+// 			}
+// 			span {
+// 				font-size: 0.8rem;
+// 			}
+// 		}
+// 	}
+
+// 	@media screen and (max-width: $labtop) {
+// 		.Gallery {
+// 			.picFrame {
+// 				article {
+// 					width: 33.333%;
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	@media screen and (max-width: $tablet) {
+// 		.Gallery {
+// 			.picFrame {
+// 				article {
+// 					width: 50%;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	@media screen and (max-width: $mobile) {
+// 		.Gallery {
+// 			.picFrame {
+// 				article {
+// 					width: 100%;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
