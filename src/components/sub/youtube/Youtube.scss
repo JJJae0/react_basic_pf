@@ -3,22 +3,20 @@
 
 .Youtubeapi {
 	width: 100px;
-	height: 10px;
-	position: absolute;
+	height: 10vh;
 
-	// .article {
-	// 	width: 100px;
-	// 	height: 100px;
-	// }
+	.conBox {
+		flex-wrap: wrap;
+	}
 	.picBox {
 		width: 100px;
 		height: 10px;
+		flex-wrap: wrap;
 
 		.Thumbnail {
 			width: 350px;
 			height: 380px;
-			display: flex;
-			justify-content: center;
+			flex-wrap: wrap;
 		}
 	}
 	.Main {

@@ -28,7 +28,6 @@ export default function Youtube() {
 					let tit = data.snippet.title;
 					let desc = data.snippet.description;
 					let date = data.snippet.publishedAt;
-
 					return (
 						<article key={idx}>
 							<div className='titBox'>
