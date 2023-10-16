@@ -4,110 +4,113 @@
 .Youtubeapi {
 	width: 100px;
 	height: 10px;
-}
-// .article {
-// 	width: 100px;
-// 	height: 100px;
-// }
-.picBox {
-	width: 100px;
-	height: 10px;
+	position: absolute;
 
-	.Thumbnail {
-		width: 350px;
-		height: 380px;
-	}
-}
-.Main {
-	.layoutBox {
-		width: 1400px;
-		height: 600px;
-		background-color: #fff;
-		margin: 0 auto;
-		position: relative;
+	// .article {
+	// 	width: 100px;
+	// 	height: 100px;
+	// }
+	.picBox {
+		width: 100px;
+		height: 10px;
 
-		.Line {
-			width: 29rem;
-			height: 0.4rem;
-			top: 10%;
-			margin-left: 60px;
-			background-color: #000;
-			position: absolute;
-		}
-		.title {
-			font-family: 'Playfair Display';
-			font-weight: bold;
-			top: 15%;
-			margin-left: 60px;
-			font-size: 4rem;
-			color: #000;
-			position: absolute;
-		}
-		.title2 {
-			font-family: 'Roboto';
-			position: fixed;
-			top: 18%;
-			left: 350px;
-			margin-left: 150px;
-			font-size: 1.7rem;
-			position: absolute;
-		}
-		.Button {
-			position: absolute;
-			top: 46%;
-			margin-left: 50px;
-
-			.button1 {
-				width: 4rem;
-				height: 4rem;
-				margin-left: 10px;
-				border-radius: 30px;
-			}
-			.button2 {
-				width: 4rem;
-				height: 4rem;
-				margin-left: 10px;
-				border-radius: 30px;
-			}
-		}
-
-		.MainBox {
+		.Thumbnail {
+			width: 350px;
+			height: 380px;
 			display: flex;
-			position: absolute;
-			top: 60%;
+			justify-content: center;
+		}
+	}
+	.Main {
+		.layoutBox {
+			width: 1400px;
+			height: 600px;
+			background-color: #fff;
+			margin: 0 auto;
+			position: relative;
 
-			.box1 {
-				width: 350px;
-				height: 380px;
-				background-color: #cecece;
-				margin-left: 22px;
-				box-shadow: 2px 3px 5px 2px rgb(189, 172, 172);
+			.Line {
+				width: 29rem;
+				height: 0.4rem;
+				top: 10%;
+				margin-left: 60px;
+				background-color: #000;
+				position: absolute;
 			}
-			.box2 {
-				width: 350px;
-				height: 380px;
-				background-color: #cecece;
-				margin-left: 22px;
-				box-shadow: 2px 3px 5px 2px rgb(189, 172, 172);
+			.title {
+				font-family: 'Playfair Display';
+				font-weight: bold;
+				top: 15%;
+				margin-left: 60px;
+				font-size: 4rem;
+				color: #000;
+				position: absolute;
 			}
-			.box3 {
-				width: 350px;
-				height: 380px;
-				background-color: #cecece;
-				margin-left: 22px;
-				box-shadow: 2px 3px 5px 2px rgb(189, 172, 172);
+			.title2 {
+				font-family: 'Roboto';
+				position: fixed;
+				top: 18%;
+				left: 350px;
+				margin-left: 150px;
+				font-size: 1.7rem;
+				position: absolute;
 			}
-			.box4 {
-				width: 350px;
-				height: 380px;
-				background-color: #cecece;
-				margin-left: 22px;
-				box-shadow: 2px 3px 5px 2px rgb(189, 172, 172);
+			.Button {
+				position: absolute;
+				top: 46%;
+				margin-left: 50px;
+
+				.button1 {
+					width: 4rem;
+					height: 4rem;
+					margin-left: 10px;
+					border-radius: 30px;
+				}
+				.button2 {
+					width: 4rem;
+					height: 4rem;
+					margin-left: 10px;
+					border-radius: 30px;
+				}
+			}
+
+			.MainBox {
+				display: flex;
+				position: absolute;
+				top: 60%;
+
+				.box1 {
+					width: 350px;
+					height: 380px;
+					background-color: #cecece;
+					margin-left: 22px;
+					box-shadow: 2px 3px 5px 2px rgb(189, 172, 172);
+				}
+				.box2 {
+					width: 350px;
+					height: 380px;
+					background-color: #cecece;
+					margin-left: 22px;
+					box-shadow: 2px 3px 5px 2px rgb(189, 172, 172);
+				}
+				.box3 {
+					width: 350px;
+					height: 380px;
+					background-color: #cecece;
+					margin-left: 22px;
+					box-shadow: 2px 3px 5px 2px rgb(189, 172, 172);
+				}
+				.box4 {
+					width: 350px;
+					height: 380px;
+					background-color: #cecece;
+					margin-left: 22px;
+					box-shadow: 2px 3px 5px 2px rgb(189, 172, 172);
+				}
 			}
 		}
 	}
 }
-
 // .content {
 // 	article {
 // 		width: 100%;
