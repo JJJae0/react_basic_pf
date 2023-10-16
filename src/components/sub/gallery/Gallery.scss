@@ -1,9 +1,9 @@
-// @import '../../../styles/Variable.scss';
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@500&display=swap');
 
 .Box {
 	display: flex;
 	justify-content: center;
+	position: relative;
 
 	.Box1 {
 		top: 20%;
@@ -15,7 +15,7 @@
 		box-shadow: 2px 3px 5px 2px gray;
 		position: relative;
 		.subBox1 {
-			top: 41%;
+			top: 36.3%;
 			left: 13.5%;
 			position: absolute;
 			width: 20rem;
@@ -181,7 +181,49 @@
 			left: 76.7%;
 		}
 	}
+	.picFrame {
+		display: flex;
+		position: absolute;
+		article {
+			width: 50%;
+			padding: 100px;
+			display: flex;
+
+			.inner {
+				width: 100%;
+				padding: 10px;
+				background: #fff;
+				box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+				display: flex;
+
+				.pic {
+					width: 100px;
+					height: 100px;
+					display: flex;
+				}
+				h2 {
+					font: normal 1rem/1.2 'arial';
+					color: #555;
+					margin-top: 10px;
+					margin-bottom: 40px;
+				}
+				.profile {
+					width: 100%;
+					align-items: center;
+					gap: 20px;
+
+					.Mainimg {
+						display: flex;
+					}
+				}
+				span {
+					font-size: 0.8rem;
+				}
+			}
+		}
+	}
 }
+
 // .Gallery {
 // 	&::after {
 // 		content: '';
@@ -221,7 +263,7 @@
 // 		}
 // 	}
 
-// 	@media screen and (max-width: $labtop) {
+// 	@media screen and (max-width: var(--labtop) {
 // 		.Gallery {
 // 			.picFrame {
 // 				article {
@@ -231,7 +273,7 @@
 // 		}
 // 	}
 
-// 	@media screen and (max-width: $tablet) {
+// 	@media screen and (max-width: var(--tablet) {
 // 		.Gallery {
 // 			.picFrame {
 // 				article {
@@ -240,7 +282,7 @@
 // 			}
 // 		}
 // 	}
-// 	@media screen and (max-width: $mobile) {
+// 	@media screen and (max-width: var(--mobile) {
 // 		.Gallery {
 // 			.picFrame {
 // 				article {

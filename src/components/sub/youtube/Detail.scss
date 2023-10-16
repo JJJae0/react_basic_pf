@@ -1,14 +1,55 @@
-.Detail {
-	.content {
-		.vidBox {
-			width: 100%;
-			height: 60vh;
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap');
 
-			iframe {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
+.Detail {
+	.Layout {
+		width: 100%;
+		border-radius: 10px;
+		height: 20rem;
+		background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+		background-color: silver;
+		position: relative;
+
+		.Title {
+			width: auto;
+			height: auto;
+			font-size: 7rem;
+			padding: 1.5rem;
+			position: fixed;
+			margin-left: 40%;
+			font-family: 'Mukta', sans-serif;
+		}
+		span {
+			font-size: 1.6rem;
+			position: fixed;
+			margin-left: 2.6%;
+			font-family: 'Mukta', sans-serif;
 		}
 	}
+	h2 {
+		font-weight: bold;
+		margin-top: 2rem;
+		font-size: 20px;
+		text-align: center;
+		font-family: 'Mukta', sans-serif;
+	}
+	.playsubTitle {
+		font-family: 'Mukta', sans-serif;
+		text-align: center;
+	}
+
+	iframe {
+		width: 100%;
+		height: 57.6vh;
+		border-radius: 10px;
+	}
 }
+// 	.content {
+// 		h1 {
+// 			font-size: 10px;
+// 		}
+// 		h2 {
+// 			font-size: 30px;
+// 		}
+//
+// 	}
+// }

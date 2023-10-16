@@ -1,4 +1,3 @@
-import Layout from '../../common/layout/Layout';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './Detail.scss';
@@ -22,16 +21,22 @@ function Detail() {
 	}, []);
 
 	return (
-		<Layout title={'Detail'}>
+		<div className='Detail'>
+			<div className='Layout'>
+				<p className='Title'>
+					essential; <br />
+					<span> Better music, Better moodial</span>
+				</p>
+			</div>
 			<h2>{Data?.title}</h2>
-			<p>{Data?.description}</p>
+			<p className='playsubTitle'>{Data?.description}</p>
 			<div className='vidBox'>
 				<iframe
 					src={`https://www.youtube.com/embed/${Data?.resourceId.videoId}`}
 					title='youtube'
 				></iframe>
 			</div>
-		</Layout>
+		</div>
 	);
 }
 
