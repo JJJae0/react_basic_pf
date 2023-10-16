@@ -23,7 +23,7 @@ export default function Youtube() {
 	}, []);
 	return (
 		<>
-			<div>
+			<div className='Youtubeapi'>
 				{Youtube.map((data, idx) => {
 					let tit = data.snippet.title;
 					let desc = data.snippet.description;
@@ -44,6 +44,7 @@ export default function Youtube() {
 								{/* 썸네일 링크 클릭시 특정유튜브 객체 하나의 정보값을 받기 위해서 유튜브 객체의 id값을 params로 전달 */}
 								<Link to={`/detail/${data.id}`}>
 									<img
+										className='Thumbnail'
 										src={data.snippet.thumbnails.standard.url}
 										alt={data.title}
 									/>
@@ -52,31 +53,31 @@ export default function Youtube() {
 						</article>
 					);
 				})}
-			</div>
-			<div className='Main'>
-				<div className='layoutBox'>
-					<div className='Line'></div>
-					<div className='Title'>
-						<p className='title'>
-							The strength <br />
-							of our company
-						</p>
-						<p className='title2'>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
-							Temporibus, suscipit. Animi explicabo necessitatibus odit?
-							<br />
-							Beatae quod, suscipit cumque labore doloribus
-						</p>
-						<div className='Button'>
-							<button className='button1'>{`<`}</button>
-							<button className='button2'>{`>`}</button>
+				<div className='Main'>
+					<div className='layoutBox'>
+						<div className='Line'></div>
+						<div className='Title'>
+							<p className='title'>
+								The strength <br />
+								of our company
+							</p>
+							<p className='title2'>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
+								Temporibus, suscipit. Animi explicabo necessitatibus odit?
+								<br />
+								Beatae quod, suscipit cumque labore doloribus
+							</p>
+							<div className='Button'>
+								<button className='button1'>{`<`}</button>
+								<button className='button2'>{`>`}</button>
+							</div>
 						</div>
-					</div>
-					<div className='MainBox'>
-						<div className='box1'></div>
-						<div className='box2'></div>
-						<div className='box3'></div>
-						<div className='box4'></div>
+						<div className='MainBox'>
+							<div className='box1'></div>
+							<div className='box2'></div>
+							<div className='box3'></div>
+							<div className='box4'></div>
+						</div>
 					</div>
 				</div>
 			</div>

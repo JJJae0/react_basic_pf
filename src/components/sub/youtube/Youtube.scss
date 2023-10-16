@@ -1,6 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
+.Youtubeapi {
+	width: 100px;
+	height: 10px;
+}
+// .article {
+// 	width: 100px;
+// 	height: 100px;
+// }
+.picBox {
+	width: 100px;
+	height: 10px;
+
+	.Thumbnail {
+		width: 350px;
+		height: 380px;
+	}
+}
 .Main {
 	.layoutBox {
 		width: 1400px;
