@@ -156,9 +156,8 @@ import './Contact.scss';
 export default function Contact() {
 	return (
 		<>
-			<div className='Background'>
-				<div className='Main'></div>
-				<div className='Layout'></div>
+			{/* <div className='Background'> */}
+			<div className='Main'>
 				<div className='Footer'></div>
 				<div className='MainTitle'>
 					<p>Contact us</p>
@@ -171,6 +170,7 @@ export default function Contact() {
 				</div>
 				<div className='Email'></div>
 			</div>
+			{/* </div> */}
 
 			{/* <div className='upperBox'>
 				<div id='mailBox'> */}
