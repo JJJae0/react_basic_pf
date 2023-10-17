@@ -145,7 +145,7 @@ export default function Gallery() {
 											setIsModal(true);
 										}}
 									/>
-									<h2>{data.title}</h2>
+									<h2 className='datatitle'>{data.title}</h2>
 
 									<div className='profile'>
 										<img
