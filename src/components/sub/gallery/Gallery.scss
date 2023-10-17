@@ -181,18 +181,12 @@
 			left: 76.7%;
 		}
 	}
+
 	.picFrame {
-		.article {
-			.inner {
-				.pic {
-					display: flex;
-					align-items: flex-start;
-				}
-			}
-		}
+		position: absolute;
+		display: flex;
 	}
 }
-
 // .picFrame {
 // 	display: flex;
 // 	position: absolute;

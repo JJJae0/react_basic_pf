@@ -171,8 +171,8 @@ export default function Gallery() {
 													);
 												}}
 											/>
-											<span onClick={handleClickProfile}>{data.owner}</span>
 										</div>
+										<span onClick={handleClickProfile}>{data.owner}</span>
 									</div>
 								</article>
 							);
