@@ -182,48 +182,52 @@
 		}
 	}
 	.picFrame {
-		display: flex;
-		position: absolute;
-		article {
-			width: 50%;
-			padding: 100px;
-			display: flex;
-
+		.article {
 			.inner {
-				width: 100%;
-				padding: 10px;
-				background: #fff;
-				box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
-				display: flex;
-
 				.pic {
-					width: 100px;
-					height: 100px;
 					display: flex;
-				}
-				h2 {
-					font: normal 1rem/1.2 'arial';
-					color: #555;
-					margin-top: 10px;
-					margin-bottom: 40px;
-				}
-				.profile {
-					width: 100%;
-					align-items: center;
-					gap: 20px;
-
-					.Mainimg {
-						display: flex;
-					}
-				}
-				span {
-					font-size: 0.8rem;
+					align-items: flex-start;
 				}
 			}
 		}
 	}
 }
 
+// .picFrame {
+// 	display: flex;
+// 	position: absolute;
+// 	article {
+// 		width: 50%;
+// 		padding: 100px;
+
+// 		.inner {
+// 			width: 100%;
+// 			padding: 10px;
+// 			background: #fff;
+// 			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+
+// 			.pic {
+// 				width: 100px;
+// 				height: 100px;
+// 			}
+// 			h2 {
+// 				font: normal 1rem/1.2 'arial';
+// 				color: #555;
+// 				margin-top: 10px;
+// 				margin-bottom: 40px;
+// 			}
+// 			.profile {
+// 				width: 100%;
+// 				align-items: center;
+// 				gap: 20px;
+
+// 				.Mainimg {
+// 					display: flex;
+// 				}
+// 			}
+// 			span {
+// 				font-size: 0.8rem;
+// 			}}
 // .Gallery {
 // 	&::after {
 // 		content: '';

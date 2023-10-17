@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import './Header.scss';
+import { FaBars } from 'react-icons/fa';
 
 export default function Header({ isMain }) {
 	return (
@@ -12,6 +13,11 @@ export default function Header({ isMain }) {
 				<li>
 					<NavLink to='/department' activeClassName='active'>
 						Department
+					</NavLink>
+				</li>
+				<li>
+					<NavLink to='/community' activeClassName='active'>
+						Community
 					</NavLink>
 				</li>
 				<li>
@@ -34,12 +40,9 @@ export default function Header({ isMain }) {
 						Contact
 					</NavLink>
 				</li>
-				<li>
-					<NavLink to='/community' activeClassName='active'>
-						Community
-					</NavLink>
-				</li>
 			</ul>
+
+			<FaBars className='bars' fontSize={24} color={'#333'} />
 		</header>
 	);
 }
