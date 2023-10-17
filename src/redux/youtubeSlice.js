@@ -17,6 +17,33 @@ export const fetchYoutube = createAsyncThunk('youtube/request', async () => {
 	return result.data.item;
 });
 
+// {type:'대기'}
+// {type: '성공': payload:[데이터]}
+// {type: '실패': payload:에러객체}
+
+// createAsyncThunk 가 반환하는 action 객체를 받아서 전역스토어 데이터를 변형하는 reducer 함수 등록
+const youtubeSlice = createSlice({
+	name: 'youtube',
+	initialState: {
+		data: [],
+		isLoading: false,
+	},
+	extraReducers: {
+		[fetchYoutube.pending]: (state) => {
+			state.isLoading = true;
+		},
+		[fetchYoutube.fulfilled]: (state, action) => {
+			state.isLoading = false;
+			state.data = action.payload;
+		},
+		[fetchYoutube.rejected]: (state, action) => {
+			state.isLoading = false;
+			state.data = action.payload;
+		},
+	},
+});
+
+export default youtubeSlice.reducer;
 // 리덕스에서 전역상태 관리에 쓰이는 용어정리
 /*
   store : 전역 state 저장공간 (은행금고)
