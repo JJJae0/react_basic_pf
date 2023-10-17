@@ -82,24 +82,25 @@
 	}
 }
 
+//tablet
 .tablet,
 .mobile {
 	.Youtube {
-		.content {
-			article {
+		.Main {
+			.layoutBox {
 				flex-wrap: wrap;
 
 				&:nth-of-type(even) {
 					flex-direction: row;
 				}
 
-				.titBox {
+				.Title {
 					width: 48%;
 				}
-				.conBox {
+				.title {
 					width: 48%;
 				}
-				.picBox {
+				.title2 {
 					width: 100%;
 					margin-top: 30px;
 				}

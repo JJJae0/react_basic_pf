@@ -1,7 +1,6 @@
 import Modal from '../../common/modal/Modal';
 import './Gallery.scss';
 import { useState, useEffect, useRef } from 'react';
-import Masonry from 'react-masonry-component';
 
 export default function Gallery() {
 	const refInput = useRef(null);
@@ -12,7 +11,6 @@ export default function Gallery() {
 	const [IsModal, setIsModal] = useState(false);
 	const my_id = '199347294@N08';
 
-	//처음 마운트 데이터 호출 함수
 	const fetchData = async (opt) => {
 		let url = '';
 		const api_key = '96ddb1e402c9b1e2d2088753c5a225ca';
@@ -40,7 +38,6 @@ export default function Gallery() {
 		setPics(json.photos.photo);
 	};
 
-	//submit이벤트 발생시 실행할 함수
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setIsUser(false);
@@ -56,7 +53,6 @@ export default function Gallery() {
 		refInput.current.value = '';
 	};
 
-	//myGallery 클릭 이벤트 발생시 실행할 함수
 	const handleClickMy = (e) => {
 		setIsUser(true);
 		if (e.target.classList.contains('on')) return;
@@ -68,7 +64,6 @@ export default function Gallery() {
 		fetchData({ type: 'user', id: my_id });
 	};
 
-	//Interest Gallery 클릭 이벤트 발생시 실행할 함수
 	const handleClickInterest = (e) => {
 		setIsUser(false);
 		if (e.target.classList.contains('on')) return;
@@ -80,7 +75,6 @@ export default function Gallery() {
 		fetchData({ type: 'interest' });
 	};
 
-	//profile 아이디 클릭시 실행할 함수
 	const handleClickProfile = (e) => {
 		if (IsUser) return;
 		fetchData({ type: 'user', id: e.target.innerText });
@@ -94,25 +88,25 @@ export default function Gallery() {
 		<>
 			<div className='Box'>
 				<div className='Box1'>
-					<div className='subBox1'></div>
+					{/* <div className='subBox1'></div> */}
 					<p className='subTitle1'>REST</p>
 					<div className='Line1'></div>
 					<div className='Gradation1'></div>
 				</div>
 				<div className='Box2'>
-					<div className='subBox2'></div>
+					{/* <div className='subBox2'></div> */}
 					<p className='subTitle2'>MENU SPACE</p>
 					<div className='Line2'></div>
 					<div className='Gradation2'></div>
 				</div>
 				<div className='Box3'>
-					<div className='subBox3'></div>
+					{/* <div className='subBox3'></div> */}
 					<p className='subTitle3'>EAVE SOFA</p>
 					<div className='Line3'></div>
 					<div className='Gradation3'></div>
 				</div>
 				<div className='Box4'>
-					<div className='subBox4'></div>
+					{/* <div className='subBox4'></div> */}
 					<p className='subTitle4'>PH HOUSE</p>
 					<div className='Line4'></div>
 					<div className='Gradation4'></div>
@@ -138,46 +132,39 @@ export default function Gallery() {
 					<button onClick={handleClickInterest}>Interest Gallery</button>
 				</div>
 				<div className='picFrame'>
-					<Masonry
-						elementType={'div'}
-						options={{ transitionDuration: '0.5s' }}
-						disableImagesLoaded={false}
-						updateOnEachImageLoad={false}
-					>
-						{Pics.map((data, idx) => {
-							return (
-								<article key={idx}>
-									<div className='inner'>
+					{Pics.map((data, idx) => {
+						return (
+							<article key={idx}>
+								<div className='inner'>
+									<img
+										className='pic'
+										src={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_m.jpg`}
+										alt={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`}
+										onClick={(e) => {
+											setActiveURL(e.target.getAttribute('alt'));
+											setIsModal(true);
+										}}
+									/>
+									<h2>{data.title}</h2>
+
+									<div className='profile'>
 										<img
-											className='pic'
-											src={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_m.jpg`}
-											alt={`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`}
-											onClick={(e) => {
-												setActiveURL(e.target.getAttribute('alt'));
-												setIsModal(true);
+											className='Mainimg'
+											src={`http://farm${data.farm}.staticflickr.com/${data.server}/buddyicons/${data.owner}.jpg`}
+											alt={data.owner}
+											onError={(e) => {
+												e.target.setAttribute(
+													'src',
+													'https://www.flickr.com/images/buddyicon.gif'
+												);
 											}}
 										/>
-										<h2>{data.title}</h2>
-
-										<div className='profile'>
-											<img
-												className='Mainimg'
-												src={`http://farm${data.farm}.staticflickr.com/${data.server}/buddyicons/${data.owner}.jpg`}
-												alt={data.owner}
-												onError={(e) => {
-													e.target.setAttribute(
-														'src',
-														'https://www.flickr.com/images/buddyicon.gif'
-													);
-												}}
-											/>
-										</div>
-										<span onClick={handleClickProfile}>{data.owner}</span>
 									</div>
-								</article>
-							);
-						})}
-					</Masonry>
+									<span onClick={handleClickProfile}>{data.owner}</span>
+								</div>
+							</article>
+						);
+					})}
 				</div>
 			</div>
 
