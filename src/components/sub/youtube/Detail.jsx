@@ -25,7 +25,7 @@ function Detail() {
 			<div className='Layout'>
 				<p className='Title'>
 					essential; <br />
-					<span> Better music, Better moodial</span>
+					<span className='subTitle'> Better music, Better moodial</span>
 				</p>
 			</div>
 			<h2>{Data?.title}</h2>

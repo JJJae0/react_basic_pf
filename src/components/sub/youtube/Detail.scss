@@ -8,21 +8,20 @@
 		background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 		background-color: silver;
 		position: relative;
+		text-align: center;
 
 		.Title {
-			width: auto;
-			height: auto;
 			font-size: 7rem;
-			padding: 1.5rem;
-			margin-left: 39%;
 			margin-top: 0 auto;
 			font-family: 'Mukta', sans-serif;
-		}
-		span {
-			font-size: 1.6rem;
-			margin-left: 2.6%;
-			font-family: 'Mukta', sans-serif;
-			position: absolute;
+			text-align: center;
+			.subTitle {
+				font-size: 10px;
+				margin-right: 10%;
+				font-family: 'Mukta', sans-serif;
+				position: absolute;
+				text-align: center;
+			}
 		}
 	}
 	h2 {
