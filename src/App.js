@@ -1,5 +1,5 @@
-import './styles/index.css';
 import './styles/Global.scss';
+
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/common/header/Header';
 import Department from './components/sub/department/Department';
@@ -7,26 +7,20 @@ import Youtube from './components/sub/youtube/Youtube';
 import Members from './components/sub/members/Members';
 import Gallery from './components/sub/gallery/Gallery';
 import Contact from './components/sub/contact/Contact';
+import Detail from './components/sub/youtube/Detail';
 import Community from './components/sub/community/Community';
 import Main from './components/main/mainWrap/Main';
-import Detail from './components/sub/youtube/Detail';
-import { useRef } from 'react';
 import { useMedia } from './hooks/useMedia';
 
 function App() {
-	useMedia();
-	const refMain = useRef(null);
 	return (
-		<main ref={refMain}>
-			{/* Switch안쪽에서 중첩되는 조건 라우트의 컴포넌트가 있을때 위쪽의 조건의 컴포넌트만 호출하고 나머지 무시 */}
+		<main className={useMedia()}>
 			<Switch>
 				<Route exact path='/'>
-					{/* 메인페이지 전용 헤더 */}
 					<Header isMain={true} />
 					<Main />
 				</Route>
 				<Route path='/'>
-					{/* 서브페이지 전용 헤더 */}
 					<Header isMain={false} />
 				</Route>
 			</Switch>

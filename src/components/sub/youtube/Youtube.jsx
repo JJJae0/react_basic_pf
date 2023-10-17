@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 
 export default function Youtube() {
 	const [Youtube, setYoutube] = useState([]);
+	// hover 효과 구현하기
+	// hover 효과 구현하기
+	// hover 효과 구현하기
 
 	//async await로 동기화 코드를 좀더 깔끔하게 정리
 	const fetchYoutube = async () => {

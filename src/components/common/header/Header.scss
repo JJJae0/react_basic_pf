@@ -6,7 +6,8 @@
 
 	h1 {
 		font-size: 1.5rem;
-		color: #333;
+		//color: #333;
+		color: var(--color1);
 	}
 
 	ul {
@@ -36,7 +37,53 @@
 	}
 }
 
-@media screen and (max-width: var(--tablet)) {
+.tablet {
+	.header {
+		ul {
+			display: none;
+		}
+	}
+}
+.header {
+	width: 100%;
+	padding: 3vh 10vw;
+	display: flex;
+	justify-content: space-between;
+
+	h1 {
+		font-size: 1.5rem;
+		//color: #333;
+		color: var(--color1);
+	}
+
+	ul {
+		display: flex;
+		gap: 4vw;
+		align-items: center;
+		font-size: 1rem;
+		color: #888;
+
+		li {
+			a.active {
+				color: hotpink;
+			}
+		}
+	}
+}
+
+.header.main {
+	h1 {
+		color: aqua;
+	}
+}
+
+.header.sub {
+	h1 {
+		color: hotpink;
+	}
+}
+
+.tablet {
 	.header {
 		ul {
 			display: none;
