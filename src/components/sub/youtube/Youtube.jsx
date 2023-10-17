@@ -1,29 +1,10 @@
 import './Youtube.scss';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function Youtube() {
-	const [Youtube, setYoutube] = useState([]);
-	// hover 효과 구현하기
-	// hover 효과 구현하기
-	// hover 효과 구현하기
+	const Youtube = useSelector((store) => store.youtube.data);
 
-	//async await로 동기화 코드를 좀더 깔끔하게 정리
-	const fetchYoutube = async () => {
-		const api_key = 'AIzaSyDahiuuGjqriZa9DGdl1wIGj_Qi7FmApCE';
-		const baseURL = 'https://www.googleapis.com/youtube/v3/playlistItems';
-		const pid = 'PLzWf7Qld-pIvOABZiY6uudaX3a3A61wgB';
-		const num = 4;
-		const resultURL = `${baseURL}?key=${api_key}&part=snippet&playlistId=${pid}&maxResults=${num}`;
-		const data = await fetch(resultURL);
-		const json = await data.json();
-		console.log(json.items);
-		setYoutube(json.items);
-	};
-
-	useEffect(() => {
-		fetchYoutube();
-	}, []);
 	return (
 		<>
 			<div className='Youtube'>

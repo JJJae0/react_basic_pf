@@ -22,7 +22,6 @@ ReactDOM.render(
 	</BrowserRouter>,
 	document.getElementById('root')
 );
-
 /*
 	redux (redux-saga, redux-toolkit)
 	- context api 를 활용한 전역 state 관리 라이브러리
