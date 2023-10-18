@@ -97,8 +97,8 @@ export default function Community() {
 				></textarea>
 
 				<nav className='btnSet'>
-					<button onClick={resetForm}>cancel</button>
-					<button onClick={createPost}>write</button>
+					<button onClick={resetForm}>삭제 </button>
+					<button onClick={createPost}>올리기</button>
 				</nav>
 			</div>
 
@@ -146,13 +146,13 @@ export default function Community() {
 								<div className='txt'>
 									<h2>{post.title}</h2>
 									<p>{post.content}</p>
-									<p>{`작성일 : ${year}-${month}-${date}`}</p>
-									<p>{`작성시간 : ${hour}:${min}:${sec}`}</p>
+									<p>{` ${year}-${month}-${date}`}</p>
+									<p>{`${hour}:${min}:${sec}`}</p>
 								</div>
 
 								<nav className='btnSet'>
-									<button onClick={() => enableUpdate(idx)}>Edit</button>
-									<button onClick={() => deletePost(idx)}>Delete</button>
+									<button onClick={() => enableUpdate(idx)}>편집</button>
+									<button onClick={() => deletePost(idx)}>삭제</button>
 								</nav>
 							</article>
 						);

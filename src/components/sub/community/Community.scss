@@ -1,10 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
 .Community {
+	text-align: center;
+
 	.content {
+		h1 {
+			font-size: 100px;
+			margin-top: 100px;
+			font-family: 'Libre Baskerville', serif;
+			font-weight: bold;
+		}
 		.inputBox {
 			width: 100%;
-			border: 1px solid #aaa;
+			margin-top: 10rem;
+			border: 1px solid #cf8d8d;
+			background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
 			padding: 50px;
-			margin-bottom: 50px;
+			margin-bottom: 10rem;
 
 			input[type='text'],
 			textarea {
@@ -26,6 +38,7 @@
 					margin-right: 20px;
 					color: #fff;
 					cursor: pointer;
+					border-radius: 5px;
 				}
 			}
 		}
