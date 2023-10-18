@@ -8,24 +8,25 @@
 		.searchBox {
 			display: flex;
 			left: 10rem;
-			.searchbutton {
-				position: fixed;
-				left: 127rem;
-				top: 9.5%;
-				border-radius: 40px;
-				background-color: rgb(212, 178, 178);
-			}
 
 			input {
-				position: fixed;
+				position: absolute;
+				top: 0;
+				left: 42rem;
+
 				width: 90rem;
 				height: 3rem;
 				border-radius: 30px;
-				left: 42rem;
+
 				// transform: translate(70%, 10%);
 			}
 			button {
 				padding: 3px;
+				position: absolute;
+				left: 127rem;
+				top: 0.7rem;
+				border-radius: 40px;
+				background-color: rgb(212, 178, 178);
 
 				font: 0.8rem/1 'Nanum Myeongjo';
 				// transform: translate(240%, 10%);
@@ -37,15 +38,15 @@
 			margin-bottom: 40px;
 
 			.on {
-				position: fixed;
+				position: absolute;
 				left: 113rem;
-				top: 9.5%;
+				top: 0.7rem;
 				border-radius: 30px;
 			}
 			button {
-				position: fixed;
+				position: absolute;
 				left: 120rem;
-				top: 9.5%;
+				top: 0.7rem;
 				border-radius: 30px;
 				padding: 3px;
 				font: 0.8rem/1 'Nanum Myeongjo';
