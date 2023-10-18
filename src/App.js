@@ -2,6 +2,7 @@ import './styles/Global.scss';
 
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/common/header/Header';
+import Menu from './components/common/menu/Menu';
 import Department from './components/sub/department/Department';
 import Youtube from './components/sub/youtube/Youtube';
 import Members from './components/sub/members/Members';
@@ -14,10 +15,11 @@ import { useMedia } from './hooks/useMedia';
 import { useEffect } from 'react';
 import { fetchYoutube } from './redux/youtubeSlice';
 import { fetchFlickr } from './redux/flickrSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 function App() {
 	const dispatch = useDispatch();
+	const { isOpen } = useSelector((store) => store.menu);
 
 	useEffect(() => {
 		dispatch(fetchYoutube());
@@ -42,6 +44,7 @@ function App() {
 			<Route path='/contact' component={Contact} />
 			<Route path='/community' component={Community} />
 			<Route path='/detail/:id' component={Detail} />
+			{isOpen && <Menu />}
 		</main>
 	);
 }

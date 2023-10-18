@@ -8,12 +8,12 @@ export default function Department() {
 
 	useEffect(() => {
 		fetch(`${path}/DB/department.json`)
-			.then((data) => data.json()) //fetch문에 대한 응답 성공시
-			.catch((err) => console.log(err)) //fetch문에 대한 응답 실패시
+			.then((data) => data.json())
+			.catch((err) => console.log(err))
 			.then((json) => {
-				setDepartment(json.members); //json데이터 변환에 대한 응답 성공시
+				setDepartment(json.members);
 			})
-			.catch((err) => console.log(err)); //json데이터 변환에 대한 응답 실패시
+			.catch((err) => console.log(err));
 	}, []);
 
 	return (
