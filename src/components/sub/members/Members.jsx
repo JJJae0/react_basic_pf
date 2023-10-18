@@ -130,7 +130,7 @@ export default function Members() {
 							{/* userid */}
 							<tr>
 								<th scope='row'>
-									<label htmlFor='userid'>Userid</label>
+									<label htmlFor='userid'>아이디</label>
 								</th>
 								<td>
 									<input
@@ -148,7 +148,7 @@ export default function Members() {
 							{/* password */}
 							<tr>
 								<th scope='row'>
-									<label htmlFor='pwd1'>Password</label>
+									<label htmlFor='pwd1'>비밀번호</label>
 								</th>
 								<td>
 									<input
@@ -166,7 +166,7 @@ export default function Members() {
 							{/* re password */}
 							<tr>
 								<th scope='row'>
-									<label htmlFor='pwd2'>Re-Password</label>
+									<label htmlFor='pwd2'>비밀번호 재입력</label>
 								</th>
 								<td>
 									<input
@@ -175,7 +175,7 @@ export default function Members() {
 										name='pwd2'
 										value={Val.pwd2}
 										onChange={handleChange}
-										placeholder='비밀번호를 재입력하세요.'
+										placeholder='한 번 더 입력하세요.'
 									/>
 									{Errs.pwd2 && <p>{Errs.pwd2}</p>}
 								</td>
@@ -201,9 +201,9 @@ export default function Members() {
 
 							{/* gender */}
 							<tr>
-								<th>Gender</th>
+								<th>성별</th>
 								<td ref={refRadioGroup}>
-									<label htmlFor='female'>female</label>
+									<label htmlFor='female'>남자</label>
 									<input
 										type='radio'
 										name='gender'
@@ -211,7 +211,7 @@ export default function Members() {
 										onChange={handleRadio}
 									/>
 
-									<label htmlFor='male'>male</label>
+									<label htmlFor='male'>여자</label>
 									<input
 										type='radio'
 										name='gender'
@@ -224,7 +224,7 @@ export default function Members() {
 
 							{/* interests */}
 							<tr>
-								<th>Interests</th>
+								<th>취미</th>
 								<td ref={refCheckGroup}>
 									<label htmlFor='sports'>sports</label>
 									<input
@@ -256,7 +256,7 @@ export default function Members() {
 							{/* education */}
 							<tr>
 								<th>
-									<label htmlFor='edu'>Education</label>
+									<label htmlFor='edu'>최종 학력 </label>
 								</th>
 								<td>
 									<select
@@ -265,7 +265,7 @@ export default function Members() {
 										onChange={handleChange}
 										ref={refSelGroup}
 									>
-										<option value=''>최종학력 선택하세요</option>
+										<option value=''>최종학력 선택하세요.</option>
 										<option value='elementary-school'>초등학교 졸업</option>
 										<option value='middle-school'>중학교 졸업</option>
 										<option value='high-school'>고등학교 졸업</option>
@@ -278,7 +278,7 @@ export default function Members() {
 							{/* comments */}
 							<tr>
 								<th>
-									<label htmlFor='comments'>Comments</label>
+									<label htmlFor='comments'>남기는 말</label>
 								</th>
 								<td>
 									<textarea
