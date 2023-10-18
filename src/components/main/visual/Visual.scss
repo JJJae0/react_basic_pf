@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
 .visual {
 	width: 100%;
 	height: calc(100vh - 90px);
-	background: aqua;
+	background: fff;
+	text-align: center;
+
+	.playlist {
+		position: absolute;
+		font-size: 60px;
+		top: 9rem;
+		left: 39%;
+		text-align: center;
+		font-family: 'Gowun Batang', serif;
+	}
+
+	.data {
+		text-align: center;
+		margin-top: 15rem;
+		font-size: 16px;
+		font-family: 'Nanum Gothic Coding';
+	}
 }

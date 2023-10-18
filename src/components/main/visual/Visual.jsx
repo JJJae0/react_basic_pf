@@ -5,11 +5,11 @@ function Visual() {
 	const { data } = useSelector((store) => store.youtube);
 	return (
 		<section className='visual'>
-			<h2>Visual</h2>
+			<h2 className='playlist'>essential pick ; </h2>
 			{data.map((vid, idx) => {
 				if (idx >= 5) return null;
 				return (
-					<article key={idx}>
+					<article className='data' key={idx}>
 						<h2>{vid.snippet.title}</h2>
 					</article>
 				);
