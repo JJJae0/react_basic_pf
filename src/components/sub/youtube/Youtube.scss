@@ -3,11 +3,19 @@
 
 .Youtube {
 	margin-top: 2rem;
+
 	.Youtubeapi {
 		display: flex;
 		position: absolute;
 		margin-left: 100px;
 		margin-top: -15rem;
+
+		&:hover {
+			img:nth-of-type(1) {
+				opacity: 0.9;
+				transform: translateZ(-5%);
+			}
+		}
 	}
 
 	.Thumbnail {
@@ -17,7 +25,6 @@
 		object-fit: cover;
 		border-radius: 10px;
 		box-shadow: 2px 3px 3px 2px gray;
-		// hover 효과 구현하기
 	}
 
 	.Main {
