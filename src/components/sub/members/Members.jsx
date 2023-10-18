@@ -116,6 +116,25 @@ export default function Members() {
 
 	return (
 		<Layout title={'Members'}>
+			<div className='lorem'>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					<br /> Porro, in eveniet aspernatur, sunt molestias <br />
+					quos harum tempore ipsum atque inventore esse <br />
+					facere fuga id ex pariatur quaerat ut minima illo. <br />
+					Dolorem omnis quisquam, blanditiis sint in laboriosam <br />
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					<br /> Porro, in eveniet aspernatur, sunt molestias <br />
+					quos harum tempore ipsum atque inventore esse <br />
+					facere fuga id ex pariatur quaerat ut minima illo. <br />
+					Dolorem omnis quisquam, blanditiis sint in laboriosam <br />
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					<br /> Porro, in eveniet aspernatur, sunt molestias <br />
+					quos harum tempore ipsum atque inventore esse <br />
+					facere fuga id ex pariatur quaerat ut minima illo. <br />
+					Dolorem omnis quisquam, blanditiis sint in laboriosam <br />
+				</p>
+			</div>
 			<form onSubmit={handleSubmit}>
 				<fieldset>
 					<legend className='h'>회원가입 폼 양식</legend>
@@ -220,26 +239,54 @@ export default function Members() {
 							<tr>
 								<th>취미</th>
 								<td ref={refCheckGroup}>
-									<label htmlFor='sports'>sports</label>
+									<label htmlFor='soccer'>축구</label>
 									<input
 										type='checkbox'
-										id='sports'
+										id='soccer'
 										name='interests'
 										onChange={handleCheck}
 									/>
 
-									<label htmlFor='game'>game</label>
+									<label htmlFor='basketball'>농구</label>
 									<input
 										type='checkbox'
-										id='game'
+										id='basketball'
 										name='interests'
 										onChange={handleCheck}
 									/>
 
-									<label htmlFor='music'>music</label>
+									<label htmlFor='baseball'>야구</label>
 									<input
 										type='checkbox'
-										id='music'
+										id='baseball'
+										name='interests'
+										onChange={handleCheck}
+									/>
+									<label htmlFor='volleyball'>배구</label>
+									<input
+										type='checkbox'
+										id='volleyball'
+										name='interests'
+										onChange={handleCheck}
+									/>
+									<label htmlFor='swimming'>수영</label>
+									<input
+										type='checkbox'
+										id='swimming'
+										name='interests'
+										onChange={handleCheck}
+									/>
+									<label htmlFor='athletics'>육상</label>
+									<input
+										type='checkbox'
+										id='athletics'
+										name='interests'
+										onChange={handleCheck}
+									/>
+									<label htmlFor='but'>기타</label>
+									<input
+										type='text'
+										id='but'
 										name='interests'
 										onChange={handleCheck}
 									/>

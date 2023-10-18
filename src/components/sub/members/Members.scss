@@ -1,10 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+
 .Members {
+	text-align: left;
 	.content {
+		width: 70rem;
+		h1 {
+			margin-left: 20px;
+			font-size: 50px;
+			margin-top: 2rem;
+			font-family: 'Libre Baskerville', serif;
+			font-weight: bold;
+		}
+		.lorem {
+			font-family: 'Libre Baskerville', serif;
+			font-size: 25px;
+			position: fixed;
+			top: 20rem;
+			left: 68rem;
+			text-align: center;
+			background-color: gray;
+			box-shadow: 20px 10px 10px 5px gray;
+		}
 		table {
+			margin-left: 20px;
 			width: 100%;
 			border: none;
 			border-top: 2px solid #333;
 			border-bottom: 2px solid #333;
+			border-right: 2px solid #333;
+			border-left: 2px solid #333;
 
 			th {
 				width: 20%;
@@ -47,6 +72,12 @@
 				input[type='radio'] {
 					margin-right: 20px;
 					margin-left: 5px;
+					padding-top: 30px;
+				}
+				#but {
+					margin-left: 10px;
+					width: 80px;
+					height: 20px;
 				}
 				p {
 					font: 0.8rem/1.2 '돋움';
