@@ -1,4 +1,3 @@
-import Layout from '../../common/layout/Layout';
 import './Members.scss';
 import { useState, useRef } from 'react';
 
@@ -121,7 +120,7 @@ export default function Members() {
 	};
 
 	return (
-		<Layout title={'Members'}>
+		<div className='Members'>
 			<form onSubmit={handleSubmit}>
 				<fieldset>
 					<legend className='h'>회원가입 폼 양식</legend>
@@ -130,7 +129,7 @@ export default function Members() {
 							{/* userid */}
 							<tr>
 								<th scope='row'>
-									<label htmlFor='userid'>Userid</label>
+									<label htmlFor='userid'>아이디</label>
 								</th>
 								<td>
 									<input
@@ -148,7 +147,7 @@ export default function Members() {
 							{/* password */}
 							<tr>
 								<th scope='row'>
-									<label htmlFor='pwd1'>Password</label>
+									<label htmlFor='pwd1'>비밀번호</label>
 								</th>
 								<td>
 									<input
@@ -166,7 +165,7 @@ export default function Members() {
 							{/* re password */}
 							<tr>
 								<th scope='row'>
-									<label htmlFor='pwd2'>Re-Password</label>
+									<label htmlFor='pwd2'>다시 한 번 더 입력해주세요</label>
 								</th>
 								<td>
 									<input
@@ -201,9 +200,9 @@ export default function Members() {
 
 							{/* gender */}
 							<tr>
-								<th>Gender</th>
+								<th>성별</th>
 								<td ref={refRadioGroup}>
-									<label htmlFor='female'>female</label>
+									<label htmlFor='female'>女</label>
 									<input
 										type='radio'
 										name='gender'
@@ -211,7 +210,7 @@ export default function Members() {
 										onChange={handleRadio}
 									/>
 
-									<label htmlFor='male'>male</label>
+									<label htmlFor='male'>男</label>
 									<input
 										type='radio'
 										name='gender'
@@ -224,9 +223,9 @@ export default function Members() {
 
 							{/* interests */}
 							<tr>
-								<th>Interests</th>
+								<th>선호하는 노래 장르</th>
 								<td ref={refCheckGroup}>
-									<label htmlFor='sports'>sports</label>
+									<label htmlFor='Ballade'>발라드</label>
 									<input
 										type='checkbox'
 										id='sports'
@@ -234,7 +233,7 @@ export default function Members() {
 										onChange={handleCheck}
 									/>
 
-									<label htmlFor='game'>game</label>
+									<label htmlFor='KPOP'>K-POP</label>
 									<input
 										type='checkbox'
 										id='game'
@@ -242,8 +241,16 @@ export default function Members() {
 										onChange={handleCheck}
 									/>
 
-									<label htmlFor='music'>music</label>
+									<label htmlFor='EDM'>EDM</label>
 									<input
+										type='checkbox'
+										id='music'
+										name='interests'
+										onChange={handleCheck}
+									/>
+									<label htmlFor='but'>기타</label>
+									<input
+										className='but'
 										type='checkbox'
 										id='music'
 										name='interests'
@@ -256,7 +263,7 @@ export default function Members() {
 							{/* education */}
 							<tr>
 								<th>
-									<label htmlFor='edu'>Education</label>
+									<label htmlFor='edu'>최종학력</label>
 								</th>
 								<td>
 									<select
@@ -278,7 +285,7 @@ export default function Members() {
 							{/* comments */}
 							<tr>
 								<th>
-									<label htmlFor='comments'>Comments</label>
+									<label htmlFor='comments'>남기는 말</label>
 								</th>
 								<td>
 									<textarea
@@ -305,6 +312,6 @@ export default function Members() {
 					</table>
 				</fieldset>
 			</form>
-		</Layout>
+		</div>
 	);
 }

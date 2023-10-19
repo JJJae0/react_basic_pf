@@ -1,29 +1,31 @@
 // 1. 해당 페이지에서 이슈사항을 설명
 
-import Layout from '../../common/layout/Layout';
 import './Community.scss';
 import { useRef, useState, useEffect } from 'react';
 
 export default function Community() {
 	const dummyData = [
 		{
-			title: 'title4',
-			content: 'Here comes content description in detail4.',
+			title: '"의사 수 확대는 필요조건" ‥ 얼마나 늘릴지는 …',
+			content:
+				'윤석열 대통령이 지역 의료, 필수 의료의 붕괴를 막기 위해서 의사 수를 늘리겠다는 입장을 분명히 했습니다.',
 			data: new Date(),
 		},
 		{
-			title: 'title3',
-			content: 'Here comes content description in detail3.',
+			title: '유명 톱배우, 마약 투약의혹 내사 …',
+			content:
+				'유명 연예인이 마약 투약 의혹으로 경찰의 내사를 받고 있다고 알려졌다.',
 			data: new Date(),
 		},
 		{
-			title: 'title2',
-			content: 'Here comes content description in detail2.',
+			title: '중고 제네시스를 신차급으로 뚝딱 …',
+			content: '현대차, 인증중고차 24일부터 판다 5년 이내 10만㎞ 이하만.',
 			data: new Date(),
 		},
 		{
-			title: 'title1',
-			content: 'Here comes content description in detail1.',
+			title: '마포 “강북의 노른자땅이 되겠어”… ',
+			content:
+				'서울시 ‘성산시영아파트 재건축 정비계획 및 정비구역 지정·경관심의(안)’ 수정 가결.',
 			data: new Date(),
 		},
 	];
@@ -115,7 +117,7 @@ export default function Community() {
 	}, [Posts]);
 
 	return (
-		<Layout title={'Community'}>
+		<div className='Community'>
 			<div className='inputBox'>
 				<input ref={refInput} type='text' placeholder='제목을 입력하세요.' />
 				<br />
@@ -128,7 +130,9 @@ export default function Community() {
 
 				<nav className='btnSet'>
 					<button onClick={resetForm}>cancel</button>
-					<button onClick={createPost}>write</button>
+					<button className='write' onClick={createPost}>
+						write
+					</button>
 				</nav>
 			</div>
 
@@ -184,8 +188,8 @@ export default function Community() {
 								<div className='txt'>
 									<h2>{post.title}</h2>
 									<p>{post.content}</p>
-									<p>{`글 작성일 : ${year}-${month}-${date}`}</p>
-									<p>{`글 작성시간 : ${hour}:${min}:${sec}`}</p>
+									<p>{`  ${year}-${month}-${date}`}</p>
+									<p>{`  ${hour}:${min}:${sec}`}</p>
 								</div>
 
 								<nav className='btnSet'>
@@ -197,7 +201,7 @@ export default function Community() {
 					}
 				})}
 			</div>
-		</Layout>
+		</div>
 	);
 }
 

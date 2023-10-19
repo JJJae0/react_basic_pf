@@ -1,6 +1,42 @@
 .Gallery {
+	.searchBox {
+		button {
+			width: 150px;
+			height: 30px;
+			border: none;
+			background-color: #555;
+			color: white;
+			margin-left: 50px;
+			border-radius: 2px;
+		}
+		input {
+			width: 50%;
+			height: 30px;
+			margin-left: 500px;
+			border-radius: 7px;
+			border: 1px solid #000;
+		}
+	}
+
+	.btnSet {
+		margin-left: 10rem;
+		margin-top: -2.3rem;
+
+		button {
+			width: 100px;
+			height: 30px;
+			background-color: rgb(177, 146, 151);
+			border: none;
+			color: white;
+			margin-right: 10px;
+			cursor: pointer;
+			border-radius: 10px;
+		}
+	}
+
 	.picFrame {
 		width: 100%;
+		opacity: 1;
 
 		&::after {
 			content: '';
@@ -14,9 +50,12 @@
 			float: left;
 
 			.inner {
+				margin-top: 5rem;
 				width: 100%;
-				padding: 10px;
-				background: #fff;
+				border-top: 2px solid #000;
+				border-left: 6px solid #000;
+				padding: 20px;
+				// background: gary;
 				box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
 
 				.pic {

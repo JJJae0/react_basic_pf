@@ -1,6 +1,5 @@
 //	1. 해당 페이지를 어떤 식으로 작업했고 어떤 이슈가 있었는지 설명
 
-import Layout from '../../common/layout/Layout';
 import Modal from '../../common/modal/Modal';
 import './Gallery.scss';
 import { useState, useRef } from 'react';
@@ -67,7 +66,7 @@ export default function Gallery() {
 
 	return (
 		<>
-			<Layout title={'Gallery'}>
+			<div className='Gallery'>
 				<div className='searchBox'>
 					<form onSubmit={handleSubmit}>
 						<input
@@ -75,7 +74,7 @@ export default function Gallery() {
 							type='text'
 							placeholder='검색어를 입력하세요'
 						/>
-						<button>검색</button>
+						<button>Search</button>
 					</form>
 				</div>
 
@@ -128,7 +127,7 @@ export default function Gallery() {
 						})}
 					</Masonry>
 				</div>
-			</Layout>
+			</div>
 
 			<Modal>
 				<img src={ActiveURL} alt='img' />

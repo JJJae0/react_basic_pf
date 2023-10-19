@@ -37,7 +37,7 @@ function News() {
 
 	return (
 		<section className='news myScroll'>
-			<h2>News</h2>
+			<h2>NEWS</h2>
 			<div className='postWrap'>
 				{Post.map((el, idx) => {
 					if (idx >= 4) return null;
