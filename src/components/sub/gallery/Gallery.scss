@@ -82,29 +82,123 @@
 	}
 }
 
-.laptop {
-	.Gallery {
-		.picFrame {
-			article {
-				width: 32%;
-			}
-		}
-	}
-}
 .tablet {
 	.Gallery {
+		.searchBox {
+			button {
+				width: 100px;
+				height: 30px;
+				border: none;
+				background-color: #555;
+				color: white;
+				margin-left: 10px;
+				border-radius: 2px;
+			}
+			input {
+				width: 200px;
+				height: 30px;
+				margin-top: -40px;
+				margin-left: 20px;
+				border-radius: 7px;
+				border: 1px solid #000;
+			}
+		}
+
+		.btnSet {
+			button {
+				width: 100px;
+				height: 30px;
+				margin-top: 3rem;
+				background-color: rgb(177, 146, 151);
+				border: none;
+				color: white;
+				margin-right: 10px;
+				cursor: pointer;
+				border-radius: 10px;
+			}
+		}
+
 		.picFrame {
-			article {
-				width: 48%;
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+		}
+		article {
+			width: 25%;
+			padding: 10px;
+			float: left;
+
+			.inner {
+				width: 100%;
+				height: 50%;
+				border: 1px solid rgb(189, 121, 148);
+				// background: gary;
+				box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+
+				span {
+					font-size: 0.8rem;
+				}
 			}
 		}
 	}
 }
+
 .mobile {
 	.Gallery {
+		.searchBox {
+			button {
+				width: 100px;
+				height: 30px;
+				border: none;
+				background-color: #555;
+				color: white;
+				margin-left: 10px;
+				border-radius: 2px;
+			}
+			input {
+				width: 200px;
+				height: 30px;
+				margin-top: -40px;
+				margin-left: 20px;
+				border-radius: 7px;
+				border: 1px solid #000;
+			}
+		}
+
+		.btnSet {
+			button {
+				width: 100px;
+				height: 30px;
+				margin-top: 3rem;
+				background-color: rgb(177, 146, 151);
+				border: none;
+				color: white;
+				margin-right: 10px;
+				cursor: pointer;
+				border-radius: 10px;
+			}
+		}
+
 		.picFrame {
-			article {
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+		}
+		article {
+			width: 25%;
+			padding: 10px;
+			float: left;
+
+			.inner {
 				width: 100%;
+				height: 50%;
+				border: 1px solid rgb(189, 121, 148);
+				// background: gary;
+				box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+
+				span {
+					font-size: 0.8rem;
+				}
 			}
 		}
 	}
