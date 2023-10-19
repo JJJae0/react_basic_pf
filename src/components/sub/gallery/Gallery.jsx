@@ -12,7 +12,6 @@ import { open } from '../../../redux/modalSlice';
 export default function Gallery() {
 	const dispatch = useDispatch();
 	const Pics = useSelector((store) => store.flickr.data);
-
 	const refInput = useRef(null);
 	const refBtnSet = useRef(null);
 	const [ActiveURL, setActiveURL] = useState('');
@@ -68,33 +67,34 @@ export default function Gallery() {
 
 	return (
 		<>
-			<Layout title={''}>
-				<div className='bigBox'>
-					<div className='searchBox'>
-						<form onSubmit={handleSubmit}>
-							<input ref={refInput} type='text' />
-							<button>search</button>
-						</form>
-					</div>
-					<div className='btnSet' ref={refBtnSet}>
-						<button className='on' onClick={handleClickMy}>
-							My Gallery
-						</button>
-
-						<button onClick={handleClickInterest}>Interest Gallery</button>
-					</div>
+			<Layout title={'Gallery'}>
+				<div className='searchBox'>
+					<form onSubmit={handleSubmit}>
+						<input
+							ref={refInput}
+							type='text'
+							placeholder='검색어를 입력하세요'
+						/>
+						<button>검색</button>
+					</form>
 				</div>
-				<div className='line'></div>
+
+				<div className='btnSet' ref={refBtnSet}>
+					<button className='on' onClick={handleClickMy}>
+						My Gallery
+					</button>
+
+					<button onClick={handleClickInterest}>Interest Gallery</button>
+				</div>
+
 				<div className='picFrame'>
 					<Masonry
 						elementType={'div'}
 						options={{ transitionDuration: '0.5s' }}
 						disableImagesLoaded={false}
 						updateOnEachImageLoad={false}
-						className='masonry'
 					>
 						{Pics.map((data, idx) => {
-							let tit = data.title;
 							return (
 								<article key={idx}>
 									<div className='inner'>
@@ -107,11 +107,10 @@ export default function Gallery() {
 												dispatch(open());
 											}}
 										/>
-										{/* <h2>{data.title}</h2> */}
-										<h2>{tit.length > 18 ? tit.substr(0, 18) + '...' : tit}</h2>
-										<div className='line'></div>
+										<h2>{data.title}</h2>
+
 										<div className='profile'>
-											{/* <img
+											<img
 												src={`http://farm${data.farm}.staticflickr.com/${data.server}/buddyicons/${data.owner}.jpg`}
 												alt={data.owner}
 												onError={(e) => {
@@ -120,7 +119,7 @@ export default function Gallery() {
 														'https://www.flickr.com/images/buddyicon.gif'
 													);
 												}}
-											/> */}
+											/>
 											<span onClick={handleClickProfile}>{data.owner}</span>
 										</div>
 									</div>

@@ -1,65 +1,6 @@
-.content {
-	position: relative;
-	.bigBox {
-		width: 100%;
-		position: relative;
-		display: flex;
-
-		.searchBox {
-			display: flex;
-			left: 10rem;
-
-			input {
-				position: absolute;
-				top: 0;
-				left: 42rem;
-
-				width: 90rem;
-				height: 3rem;
-				border-radius: 30px;
-
-				// transform: translate(70%, 10%);
-			}
-			button {
-				padding: 3px;
-				position: absolute;
-				left: 127rem;
-				top: 0.7rem;
-				border-radius: 40px;
-				background-color: rgb(212, 178, 178);
-
-				font: 0.8rem/1 'Nanum Myeongjo';
-				// transform: translate(240%, 10%);
-			}
-		}
-		.btnSet {
-			// display: inline;
-			// position: relative;
-			margin-bottom: 40px;
-
-			.on {
-				position: absolute;
-				left: 113rem;
-				top: 0.7rem;
-				border-radius: 30px;
-			}
-			button {
-				position: absolute;
-				left: 120rem;
-				top: 0.7rem;
-				border-radius: 30px;
-				padding: 3px;
-				font: 0.8rem/1 'Nanum Myeongjo';
-				// transform: translate(70%, 0px);
-			}
-		}
-	}
-
+.Gallery {
 	.picFrame {
 		width: 100%;
-		position: absolute;
-		// display: flex;
-		// justify-content: space-between;
 
 		&::after {
 			content: '';
@@ -69,61 +10,30 @@
 
 		article {
 			width: 25%;
-			// padding: 10px;
-			margin-top: 2rem;
-			margin-left: 6rem;
-			margin-right: 5rem;
-			margin-bottom: 20px;
-			// display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-
-			&:nth-of-type(3),
-			&:nth-of-type(6),
-			&:nth-of-type(9) {
-				margin-right: 0;
-			}
+			padding: 10px;
+			float: left;
 
 			.inner {
-				width: 30rem;
-				height: 30vh;
+				width: 100%;
 				padding: 10px;
-				background: #efefef;
-				box-shadow: 7px 7px 15px gray;
-
-				&:hover {
-					background: rgb(134, 99, 99);
-
-					.pic {
-						filter: grayscale(0);
-					}
-					h2 {
-						color: #d1cfcf;
-					}
-					span {
-						color: #d1cfcf;
-					}
-					.profile {
-						filter: grayscale(0);
-					}
-				}
+				background: #fff;
+				box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
 
 				.pic {
 					width: 100%;
-					height: 22vh;
-					filter: grayscale(0.7);
 				}
 				h2 {
-					font: normal 1.1rem/1.2 'arial';
+					font: normal 1rem/1.2 'arial';
 					color: #555;
 					margin-top: 10px;
+					margin-bottom: 40px;
 				}
 				.profile {
 					width: 100%;
 					display: flex;
-
-					filter: grayscale(1);
+					align-items: center;
 					gap: 20px;
+
 					span {
 						font-size: 0.8rem;
 					}
@@ -135,23 +45,9 @@
 
 .laptop {
 	.Gallery {
-		.btnSet {
-			display: inline;
-			position: relative;
-			margin-bottom: 10px;
-			// margin-right: -300px;
-
-			button {
-				margin-right: 8px;
-				padding: 3px;
-				font: 0.8rem/1 'Nanum Myeongjo';
-				// transform: translate(50px, 0px);
-			}
-		}
 		.picFrame {
 			article {
-				width: 25%;
-				margin-right: 0px;
+				width: 32%;
 			}
 		}
 	}
@@ -160,8 +56,7 @@
 	.Gallery {
 		.picFrame {
 			article {
-				width: 45%;
-				margin-right: 10px;
+				width: 48%;
 			}
 		}
 	}

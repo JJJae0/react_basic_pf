@@ -17,7 +17,14 @@ function Visual() {
 						if (idx >= 5) return null;
 						return (
 							<li key={idx} children className={idx === Index ? 'on' : ''}>
-								{tit.snippet.title}
+								<h3>{tit.snippet.title}</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+									Omnis ducimus sapiente necessitatibus odio labore iusto unde
+									at quo. Sint molestias vitae enim eligendi quaerat.
+								</p>
+
+								<button>VIEW</button>
 							</li>
 						);
 					})}

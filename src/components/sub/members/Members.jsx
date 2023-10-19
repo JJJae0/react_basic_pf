@@ -59,6 +59,7 @@ export default function Members() {
 			errs.userid = '아이디는 최소 5글자 이상 입력하세요.';
 		}
 
+		//비밀번호 인증 (5글자 이상, 문자, 숫자, 특수문자 모두 포함)
 		if (
 			value.pwd1.length < 5 ||
 			!num.test(value.pwd1) ||
@@ -68,10 +69,12 @@ export default function Members() {
 			errs.pwd1 = '비밀번호는 5글자이상, 문자,숫자,특수문자를 모두 포함하세요';
 		}
 
+		//비밀번호 재확인 인증
 		if (value.pwd1 !== value.pwd2 || !value.pwd2) {
 			errs.pwd2 = '2개의 비밀번호를 같게 입력하세요.';
 		}
 
+		//이메일 인증
 		if (!value.email || !/@/.test(value.email)) {
 			errs.email = '이메일은 무조건 @를 포함해야 합니다.';
 		} else {
@@ -86,18 +89,21 @@ export default function Members() {
 			}
 		}
 
+		//성별인증
 		if (!value.gender) {
 			errs.gender = '성별은 필수 체크항목입니다.';
 		}
 
+		//관심사인증
 		if (!value.interests) {
 			errs.interests = '관심사를 하나이상 체크해주세요.';
 		}
 
+		//학력 인증
 		if (!value.edu) {
 			errs.edu = '학력을 선택하세요.';
 		}
-
+		//남기는말 인증
 		if (value.comments.length < 10) {
 			errs.comments = '남기는말은 10글자 이상 입력하세요.';
 		}
@@ -116,25 +122,6 @@ export default function Members() {
 
 	return (
 		<Layout title={'Members'}>
-			<div className='lorem'>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					<br /> Porro, in eveniet aspernatur, sunt molestias <br />
-					quos harum tempore ipsum atque inventore esse <br />
-					facere fuga id ex pariatur quaerat ut minima illo. <br />
-					Dolorem omnis quisquam, blanditiis sint in laboriosam <br />
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					<br /> Porro, in eveniet aspernatur, sunt molestias <br />
-					quos harum tempore ipsum atque inventore esse <br />
-					facere fuga id ex pariatur quaerat ut minima illo. <br />
-					Dolorem omnis quisquam, blanditiis sint in laboriosam <br />
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					<br /> Porro, in eveniet aspernatur, sunt molestias <br />
-					quos harum tempore ipsum atque inventore esse <br />
-					facere fuga id ex pariatur quaerat ut minima illo. <br />
-					Dolorem omnis quisquam, blanditiis sint in laboriosam <br />
-				</p>
-			</div>
 			<form onSubmit={handleSubmit}>
 				<fieldset>
 					<legend className='h'>회원가입 폼 양식</legend>
@@ -143,7 +130,7 @@ export default function Members() {
 							{/* userid */}
 							<tr>
 								<th scope='row'>
-									<label htmlFor='userid'>아이디</label>
+									<label htmlFor='userid'>Userid</label>
 								</th>
 								<td>
 									<input
@@ -161,7 +148,7 @@ export default function Members() {
 							{/* password */}
 							<tr>
 								<th scope='row'>
-									<label htmlFor='pwd1'>비밀번호</label>
+									<label htmlFor='pwd1'>Password</label>
 								</th>
 								<td>
 									<input
@@ -179,7 +166,7 @@ export default function Members() {
 							{/* re password */}
 							<tr>
 								<th scope='row'>
-									<label htmlFor='pwd2'>비밀번호 재입력</label>
+									<label htmlFor='pwd2'>Re-Password</label>
 								</th>
 								<td>
 									<input
@@ -188,7 +175,7 @@ export default function Members() {
 										name='pwd2'
 										value={Val.pwd2}
 										onChange={handleChange}
-										placeholder='한 번 더 입력하세요.'
+										placeholder='비밀번호를 재입력하세요.'
 									/>
 									{Errs.pwd2 && <p>{Errs.pwd2}</p>}
 								</td>
@@ -214,9 +201,9 @@ export default function Members() {
 
 							{/* gender */}
 							<tr>
-								<th>성별</th>
+								<th>Gender</th>
 								<td ref={refRadioGroup}>
-									<label htmlFor='female'>남자</label>
+									<label htmlFor='female'>female</label>
 									<input
 										type='radio'
 										name='gender'
@@ -224,7 +211,7 @@ export default function Members() {
 										onChange={handleRadio}
 									/>
 
-									<label htmlFor='male'>여자</label>
+									<label htmlFor='male'>male</label>
 									<input
 										type='radio'
 										name='gender'
@@ -237,56 +224,28 @@ export default function Members() {
 
 							{/* interests */}
 							<tr>
-								<th>취미</th>
+								<th>Interests</th>
 								<td ref={refCheckGroup}>
-									<label htmlFor='soccer'>축구</label>
+									<label htmlFor='sports'>sports</label>
 									<input
 										type='checkbox'
-										id='soccer'
+										id='sports'
 										name='interests'
 										onChange={handleCheck}
 									/>
 
-									<label htmlFor='basketball'>농구</label>
+									<label htmlFor='game'>game</label>
 									<input
 										type='checkbox'
-										id='basketball'
+										id='game'
 										name='interests'
 										onChange={handleCheck}
 									/>
 
-									<label htmlFor='baseball'>야구</label>
+									<label htmlFor='music'>music</label>
 									<input
 										type='checkbox'
-										id='baseball'
-										name='interests'
-										onChange={handleCheck}
-									/>
-									<label htmlFor='volleyball'>배구</label>
-									<input
-										type='checkbox'
-										id='volleyball'
-										name='interests'
-										onChange={handleCheck}
-									/>
-									<label htmlFor='swimming'>수영</label>
-									<input
-										type='checkbox'
-										id='swimming'
-										name='interests'
-										onChange={handleCheck}
-									/>
-									<label htmlFor='athletics'>육상</label>
-									<input
-										type='checkbox'
-										id='athletics'
-										name='interests'
-										onChange={handleCheck}
-									/>
-									<label htmlFor='but'>기타</label>
-									<input
-										type='text'
-										id='but'
+										id='music'
 										name='interests'
 										onChange={handleCheck}
 									/>
@@ -297,7 +256,7 @@ export default function Members() {
 							{/* education */}
 							<tr>
 								<th>
-									<label htmlFor='edu'>최종 학력 </label>
+									<label htmlFor='edu'>Education</label>
 								</th>
 								<td>
 									<select
@@ -306,7 +265,7 @@ export default function Members() {
 										onChange={handleChange}
 										ref={refSelGroup}
 									>
-										<option value=''>최종학력 선택하세요.</option>
+										<option value=''>최종학력 선택하세요</option>
 										<option value='elementary-school'>초등학교 졸업</option>
 										<option value='middle-school'>중학교 졸업</option>
 										<option value='high-school'>고등학교 졸업</option>
@@ -319,7 +278,7 @@ export default function Members() {
 							{/* comments */}
 							<tr>
 								<th>
-									<label htmlFor='comments'>남기는 말</label>
+									<label htmlFor='comments'>Comments</label>
 								</th>
 								<td>
 									<textarea
@@ -349,16 +308,3 @@ export default function Members() {
 		</Layout>
 	);
 }
-
-/*
-	react-hook-form 을 쓰지 않고 직접 기능을 만들었냐?
-	- 라이브러리는 언제든지 연결할 수 있는 건데, 아직은 배우는 입장이기 때문에 부족하지만, 어떤 인증로직이 처리되는지 
-	직접 만들어 보고 싶었습니다
-
-	그래서 checkbox, radio, selector, textarea 같이 필수입력사항이 아닌 요소도 직접 인증구현을 해봤습니다
-	인증처리 하면서 제일 힘들었던 부분은 비밀번호, 이메일 인증 구현이 힘들었습니다
-
-	구글링을 해보니 정규표현식의 예시코드가 많이 있었지만 아직 정규표현식을 제대로 공부한 게 아니여서, 
-	모르는 상태에서 붙여넣기 식으로 구현하기에는 내것이 아닌 거 같아 
-	제가 알고 있는 문자열 관련 메서드를 최대한 많이 활용해서 구현했습니다
-*/

@@ -11,9 +11,7 @@ export default function Contact() {
 	const [Traffic, setTraffic] = useState(false);
 	const [Index, setIndex] = useState(0);
 	const [IsMap, setIsMap] = useState(true);
-
 	const { kakao } = window;
-
 	const info = useRef([
 		{
 			title: '삼성역 코엑스',
@@ -38,6 +36,7 @@ export default function Contact() {
 		},
 	]);
 
+	//위의 정보값을 활용한 마커 객체 생성
 	const marker = new kakao.maps.Marker({
 		position: info.current[Index].latlng,
 		image: new kakao.maps.MarkerImage(
@@ -47,31 +46,44 @@ export default function Contact() {
 		),
 	});
 
+	//지도위치를 중심으로 이동시키는 핸들러 함수 제작
 	const setCenter = () => {
 		console.log('지도화면에서 마커 가운데 보정');
-
+		// 지도 중심을 이동 시킵니다
 		instance.current.setCenter(info.current[Index].latlng);
 	};
 
 	useEffect(() => {
+		//Index값이 변경될때마다 새로운 지도 레이어가 중첩되므로
+		//일단은 기존 map안의 모든 요소를 없애서 초기화
 		map.current.innerHTML = '';
+		//객체 정보를 활용한 지도 객체 생성
 		instance.current = new kakao.maps.Map(map.current, {
 			center: info.current[Index].latlng,
 			level: 1,
 		});
+		//마커 객체에 지도 객체 연결
 		marker.setMap(instance.current);
 
+		//지도 타입 변경 UI추가
 		const mapTypeControl = new kakao.maps.MapTypeControl();
 		instance.current.addControl(
 			mapTypeControl,
 			kakao.maps.ControlPosition.BOTTOMLEFT
 		);
 
+		//지도 생성시 마커 고정적으로 적용되기 때문에 브라우저 리사이즈시 마커가 가운데 위치하지 않는 문제
+		//마커를 가운데 고정시키는 함수를 제작한뒤 윈도우객체 직접 resize이벤트 발생시마다 핸들러함수 호출해서 마커위치 보정
+
+		//Contact페이지에만 동작되야 되는 핸들러함수를 최상위 객체인 window에 직접 연결했기 때문에
+		//라우터로 다른페이지이동하더라도 계속해서 setCenter호출되는 문제점 발생
+		//해결방법: Contact 컴포넌트가 언마운트시 강제로 윈도우객체에서 setCenter핸들러를 제거
 		window.addEventListener('resize', setCenter);
 
+		//로드뷰 관련 코드
 		new kakao.maps.RoadviewClient().getNearestPanoId(
 			info.current[Index].latlng,
-			100,
+			100, //해당 지도의 위치값에서 반경 100미터 안에 제일 가까운 도로 기준으로 로드뷰화면 생성
 			(panoId) => {
 				new kakao.maps.Roadview(view.current).setPanoId(
 					panoId,
@@ -83,9 +95,10 @@ export default function Contact() {
 		return () => {
 			window.removeEventListener('resize', setCenter);
 		};
-	}, [Index]);
+	}, [Index]); //Index값이 변경될때마다 지도화면이 다시 갱신되어야 하므로 Index값을 의존성 배열에 등록
 
 	useEffect(() => {
+		//traffic 값이 바뀔때마다 실행될 구문
 		Traffic
 			? instance.current.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC)
 			: instance.current.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
@@ -100,6 +113,7 @@ export default function Contact() {
 		msgForm.value = '';
 	};
 
+	//form mail 기능함수
 	const sendEmail = (e) => {
 		e.preventDefault();
 
@@ -109,6 +123,9 @@ export default function Contact() {
 
 		if (!nameForm.value || !mailForm.value || !msgForm.value)
 			return alert('사용자이름, 이메일주소, 문의내용은 필수 입력사항입니다.');
+
+		//sendForm메서드는 각 키값을 문자열로만 인수로 전달되도록 type지정되어 있기 때문에
+		//변수를 `${}`로 감싸서 문자형식으로 전달
 
 		emailjs
 			.sendForm(
@@ -135,10 +152,7 @@ export default function Contact() {
 		<Layout title={'Contact'}>
 			<div className='upperBox'>
 				<div id='mailBox'>
-					<p className='why'>
-						궁금한 점이 있나요? <br />
-						메일로 보내주세요!
-					</p>
+					<h2>Send E-Mail</h2>
 					<form ref={form} onSubmit={sendEmail}>
 						<div className='upper'>
 							<span>
@@ -162,6 +176,14 @@ export default function Contact() {
 							<input type='submit' value='Send' />
 						</div>
 					</form>
+				</div>
+
+				<div id='etc'>
+					<h2>Information</h2>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, id
+					nesciunt? Dolores architecto quas voluptate dolorem impedit ab dolore,
+					itaque blanditiis iste esse delectus libero ipsum repudiandae porro
+					nulla fuga.
 				</div>
 			</div>
 
@@ -201,22 +223,3 @@ export default function Contact() {
 		</Layout>
 	);
 }
-
-/*
-	해당 페이지의 이슈사항은
-	- kakao map api 가 리액트 버전의 사용구문이 없었기 때문에 일반 cdn 방식으로 불러온 api 를 
-		리액트에 맞게 변환하는 작업이 힘들었습니다 
-	- cdn 으로 받아서 kakao 생성자함수를 컴포넌트 안쪽에서 불러와지지 않는 문제가 있어서 window 객체로부터 직접
-	비구조화할당으로 뽑아와서 활용했습니다
-
-	kakao 생성자를 통해서 만들어진 지도 인스턴스 값을 state 에 담아서 각각의 이벤트에 연결했습니다
-	작업을 하다보니 아무래도 리액트를 작업하는 프로젝트는 지점이 많은 대형프로젝트 일 것 같아서 지점 버튼 클릭 시
-	다른 지도를 출력하도록 구현했는데, 너무 코드 가독성이 떨어지는 거 같아 지도 정보값을 배열형태로 묶어 추후 
-	배열데이터가 변경이 되면 데이터 기반으로 자동으로 새로운 지도 인스턴스 생성과 이벤트 연결까지 한 번에 처리 
-	되도록 자동화 시키는데 중점을 뒀습니다
-
-	이슈사항1 - 브라우저 리사이즈 시 마커가 가운데 가지 않아서 브라우저 리사이즈 이벤트 발생할 때마다 마커가 가운데 위치하는 함수를 재호출했습니다 
-	
-	- window 객체에 이벤트를 연결하다보니 리사이즈 이벤트가 발생할 필요가 없는 다른 컴포넌트에서도 핸들러함수가 호출되는 
-	문제점이 있어서 컴포넌트 언마운트 시 윈도우객체에 이벤트핸들러를 제거했습니다
-*/
