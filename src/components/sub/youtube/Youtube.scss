@@ -89,49 +89,116 @@
 	}
 }
 
-//tablet
-.tablet,
 .mobile {
 	.Youtube {
-		.Main {
-			.layoutBox {
-				flex-wrap: wrap;
+		margin-top: 2rem;
 
-				&:nth-of-type(even) {
-					flex-direction: row;
-				}
+		.Youtubeapi {
+			display: inline;
+			position: absolute;
+			margin-top: -45rem;
+		}
 
-				.picBox {
-					width: 30%;
-					height: 10px;
-				}
-				.Thumbnail {
-					width: 48%;
-				}
-				.title2 {
-					width: 100%;
-					margin-top: 30px;
-				}
+		.Thumbnail {
+			width: 280px;
+			height: 280px;
+			object-fit: cover;
+			top: 30%;
+			margin-left: -5rem;
+			border-radius: 10px;
+			box-shadow: 2px 3px 3px 2px gray;
+		}
+
+		.layoutBox {
+			width: 350px;
+			height: 80vh;
+			background-color: #fff;
+			margin: 0 auto;
+			position: relative;
+			border-radius: 5px;
+
+			.Line {
+				width: 18rem;
+				height: 0.4rem;
+				top: 3%;
+				margin-left: 15px;
+				background-color: #000;
+				position: absolute;
+			}
+			.title {
+				font-family: 'Playfair Display';
+				font-weight: bold;
+				top: 3%;
+				margin-left: 15px;
+				font-size: 4rem;
+				color: #000;
+				position: absolute;
 			}
 		}
 	}
 }
 
-//mobile
-.mobile {
+.tablet {
 	.Youtube {
-		.content {
-			article {
-				.titBox {
-					width: 100%;
-				}
-				.conBox {
-					width: 100%;
-				}
+		margin-top: 2rem;
+
+		.Youtubeapi {
+			display: inline;
+			position: absolute;
+			margin-top: -45rem;
+		}
+
+		.Thumbnail {
+			width: 700px;
+			height: 300px;
+			object-fit: cover;
+			top: auto;
+			margin-left: -5rem;
+			margin-bottom: 2rem;
+			border-radius: 10px;
+			box-shadow: 2px 3px 3px 2px gray;
+		}
+
+		.layoutBox {
+			width: 750px;
+			height: 80vh;
+			background-color: #fff;
+			margin: 0 auto;
+			position: relative;
+			border-radius: 5px;
+
+			.Line {
+				width: 18rem;
+				height: 0.4rem;
+				top: 3%;
+				margin-left: 15px;
+				background-color: #000;
+				position: absolute;
+			}
+			.title {
+				font-family: 'Playfair Display';
+				font-weight: bold;
+				top: 3%;
+				margin-left: 15px;
+				font-size: 4rem;
+				color: #000;
+				position: absolute;
+			}
+			.title2 {
+				font-family: 'Roboto';
+				position: fixed;
+				top: 4%;
+				left: 280px;
+				margin-left: 10px;
+				font-size: 1rem;
+				position: absolute;
 			}
 		}
 	}
 }
+
+// //mobile
+// .mobile {}
 // .content {
 // 	article {
 // 		width: 100%;
