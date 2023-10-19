@@ -4,22 +4,54 @@
 .visual {
 	width: 100%;
 	height: calc(100vh - 90px);
-	background: fff;
-	text-align: center;
 
-	.playlist {
-		position: absolute;
-		font-size: 60px;
-		top: 9rem;
-		left: 39%;
-		text-align: center;
-		font-family: 'Gowun Batang', serif;
-	}
+	.swiper {
+		height: 100%;
+		padding: 8vw 0px;
 
-	.data {
-		text-align: center;
-		margin-top: 15rem;
-		font-size: 16px;
-		font-family: 'Nanum Gothic Coding';
+		.swiper-slide {
+			width: 100%;
+			height: 100%;
+			perspective: 700px;
+		}
+		.swiper-slide-active {
+			.inner {
+				transform: scale(1);
+				opacity: 1;
+
+				button {
+					opacity: 1;
+					transform: translateX(0px);
+				}
+			}
+		}
+		.swiper-slide-prev {
+			.inner {
+				transform: scale(0.8) rotateY(30deg);
+				opacity: 0.7;
+			}
+		}
+		.swiper-slide-next {
+			.inner {
+				transform: scale(0.8) rotateY(-30deg);
+				opacity: 0.7;
+			}
+		}
 	}
 }
+
+// .playlist {
+// 	position: absolute;
+// 	font-size: 60px;
+// 	top: 9rem;
+// 	left: 39%;
+// 	text-align: center;
+// 	font-family: 'Gowun Batang', serif;
+// }
+
+// .data {
+// 	text-align: center;
+// 	margin-top: 15rem;
+// 	font-size: 16px;
+// 	font-family: 'Nanum Gothic Coding';
+// }

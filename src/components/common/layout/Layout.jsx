@@ -4,15 +4,27 @@ import './Layout.scss';
 	1. Layout.jsx 를 왜 만들었는지 설명
 */
 
+import './Layout.scss';
+import { useEffect, useRef } from 'react';
+
 export default function Layout({ title, children }) {
+	const refFrame = useRef(null);
+	const refTitle = useRef(null);
+
+	useEffect(() => {
+		setTimeout(() => {
+			refFrame.current.classList.add('on');
+		}, 300);
+	}, []);
+
 	return (
-		<section className={`layout ${title}`}>
+		<section ref={refFrame} className={`layout ${title}`}>
+			<h1 ref={refTitle}>{title}</h1>
+			<div className='bar'></div>
+
 			<figure></figure>
 
-			<div className='content'>
-				<h1>{title}</h1>
-				{children}
-			</div>
+			{children}
 		</section>
 	);
 }

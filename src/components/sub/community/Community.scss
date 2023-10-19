@@ -31,7 +31,7 @@
 			.btnSet {
 				button {
 					width: 150px;
-					height: 30px;
+					height: 5vh;
 					display: inline-block;
 					border: none;
 					background: #555;
@@ -89,6 +89,33 @@
 						}
 						&:nth-of-type(2) {
 							color: orangered;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.tablet,
+.mobile {
+	.Community {
+		.content {
+			.inputBox {
+				input[type='text'],
+				textarea {
+					width: 100%;
+				}
+
+				.btnSet {
+					display: flex;
+					justify-content: space-between;
+					button {
+						width: 47%;
+						margin-right: 3%;
+
+						&:last-child {
+							margin-right: 0%;
 						}
 					}
 				}

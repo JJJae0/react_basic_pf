@@ -195,21 +195,20 @@
 
 .tablet,
 .mobile {
-	.Contact {
-		.content {
-			.upperBox {
-				#mailBox {
-					width: 100%;
-					padding-right: 0px;
-				}
-
-				#etc {
-					width: 100%;
-					height: auto;
-					padding-left: 0px;
-					border-left: none;
-				}
-			}
-		}
+	// .Contact {
+	// 	.upperBox {
+	// 		padding: auto;
+	// 	}
+	#mapBox {
+		width: 10vw;
+		height: 100vh;
 	}
+
+	// #etc {
+	// 	width: 100%;
+	// 	height: auto;
+	// 	padding-left: 0px;
+	// 	border-left: none;
+	// }
 }
+// }
