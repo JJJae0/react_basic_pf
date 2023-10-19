@@ -16,7 +16,7 @@ function Menu() {
 					transition={{ duration: 0.5 }}
 				>
 					<h1>
-						<Link to='/'>LOGO</Link>
+						<Link to='/'>JAE.Y</Link>
 					</h1>
 
 					<ul>

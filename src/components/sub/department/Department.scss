@@ -60,12 +60,12 @@
 .main1 {
 	.main2 {
 		height: 100px;
-		font-size: 320px;
+		font-size: 300px;
 		font-family: 'Abril Fatface';
 		padding-left: 50px;
 		text-align: left;
 		position: fixed;
-		top: 29rem;
+		top: 40rem;
 	}
 	.main3 {
 		font-family: 'Playfair Display', serif;
@@ -134,76 +134,116 @@
 	}
 }
 
-//tablet
-.tablet,
 .mobile {
-	.Department {
-		.container {
-			flex-wrap: wrap;
+	.container {
+		.memberBox {
+			article {
+				width: 32%;
+				margin-bottom: 80px;
 
-			.infoBox {
-				width: 100%;
-				height: 200px;
-				margin-bottom: 50px;
-			}
-			.memberBox {
-				width: 100%;
+				.pic {
+					width: 100%;
+					height: 45vh;
+					margin-top: 70px;
 
-				article {
-					width: 48%;
+					img {
+						width: 80%;
+						height: 100%;
+						object-fit: cover;
+						box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+						transition: 0.5s;
+						border-radius: 7px;
+					}
+				}
+
+				.name1 {
+					font-family: 'Cormorant Garamond';
+					font-size: 10px;
+				}
+				.name2 {
+					font-family: 'Cormorant Garamond';
+					font-size: 40px;
 				}
 			}
+		}
+	}
+
+	.main1 {
+		.main2 {
+			height: 10px;
+			font-size: 160px;
+			font-family: 'Abril Fatface';
+			padding-left: 20px;
+			text-align: left;
+			position: fixed;
+			top: 50rem;
+		}
+		.main3 {
+			font-family: 'Playfair Display', serif;
+			position: fixed;
+			top: 13%;
+			left: 15px;
+			transform: rotateZ(360deg);
+			font-size: 1rem;
 		}
 	}
 }
 
 //mobile
-.mobile {
-	.Department {
-		.container {
-			.memberBox {
-				width: 100%;
+.tablet {
+	.container {
+		.memberBox {
+			article {
+				width: 32%;
+				margin-bottom: 80px;
 
-				article {
+				.pic {
 					width: 100%;
+					height: 45vh;
+					margin-top: 70px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+						transition: 0.5s;
+						border-radius: 7px;
+					}
+				}
+
+				.name1 {
+					font-family: 'Cormorant Garamond';
+					font-size: 10px;
+				}
+				.name2 {
+					font-family: 'Cormorant Garamond';
+					font-size: 40px;
 				}
 			}
 		}
 	}
+
+	.main1 {
+		.main2 {
+			height: 10px;
+			font-size: 200px;
+			font-family: 'Abril Fatface';
+			padding-left: 5px;
+			text-align: left;
+			position: fixed;
+			top: 60rem;
+		}
+		.main3 {
+			font-family: 'Playfair Display', serif;
+			position: fixed;
+			top: 13%;
+			left: 15px;
+			transform: rotateZ(360deg);
+			font-size: 1rem;
+		}
+	}
 }
-// .container {
-// 	width: 100%;
-// 	display: flex;
-// 	justify-content: space-between;
-
-// 	.infoBox {
-// 		width: 25%;
-// 		height: 50vh;
-// 		background: blue;
-// 	}
-// 	.memberBox {
-// 		width: 70%;
-// 		display: flex;
-// 		justify-content: space-between;
-// 		flex-wrap: wrap; //줄바꿈처리
-
-// 		article {
-// 			width: 32%;
-// 			margin-bottom: 70px;
-
-// 			.pic {
-// 				width: 100%;
-// 				height: 40vh;
-
-// 				img {
-// 					width: 100%;
-// 					height: 100%;
-// 					object-fit: cover;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
 
 /*
 	flex로 UI좌우 배치하는 방법
