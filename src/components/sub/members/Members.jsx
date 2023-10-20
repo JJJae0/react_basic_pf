@@ -7,8 +7,8 @@ export default function Members() {
 		pwd1: '',
 		pwd2: '',
 		email: '',
-		gender: false,
-		interests: false,
+		gender: '',
+		interests: [],
 		edu: '',
 		comments: '',
 	};
@@ -33,11 +33,6 @@ export default function Members() {
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setVal({ ...Val, [name]: value });
-	};
-
-	const handleRadio = (e) => {
-		const { name, checked } = e.target;
-		setVal({ ...Val, [name]: checked });
 	};
 
 	const handleCheck = (e) => {
@@ -207,7 +202,8 @@ export default function Members() {
 										type='radio'
 										name='gender'
 										id='female'
-										onChange={handleRadio}
+										defaultValue='famale'
+										onChange={handleCheck}
 									/>
 
 									<label htmlFor='male'>男</label>
@@ -215,7 +211,8 @@ export default function Members() {
 										type='radio'
 										name='gender'
 										id='male'
-										onChange={handleRadio}
+										defaultValue='male'
+										onChange={handleCheck}
 									/>
 									{Errs.gender && <p>{Errs.gender}</p>}
 								</td>
@@ -230,6 +227,7 @@ export default function Members() {
 										type='checkbox'
 										id='sports'
 										name='interests'
+										defaultValue='Ballade'
 										onChange={handleCheck}
 									/>
 
@@ -238,6 +236,7 @@ export default function Members() {
 										type='checkbox'
 										id='game'
 										name='interests'
+										defaultValue='KPOP'
 										onChange={handleCheck}
 									/>
 
@@ -246,6 +245,7 @@ export default function Members() {
 										type='checkbox'
 										id='music'
 										name='interests'
+										defaultValue='EDM'
 										onChange={handleCheck}
 									/>
 									<label htmlFor='but'>기타</label>
@@ -254,6 +254,7 @@ export default function Members() {
 										type='checkbox'
 										id='music'
 										name='interests'
+										defaultValue='but'
 										onChange={handleCheck}
 									/>
 									{Errs.interests && <p>{Errs.interests}</p>}
