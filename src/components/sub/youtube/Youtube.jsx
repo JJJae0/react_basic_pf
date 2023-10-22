@@ -6,7 +6,6 @@ import './Youtube.scss';
 
 export default function Youtube() {
 	const { data: Youtube } = useYoutubeQuery();
-
 	return (
 		<>
 			<Layout title={''}>
