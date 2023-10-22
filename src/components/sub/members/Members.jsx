@@ -116,6 +116,13 @@ export default function Members() {
 
 	return (
 		<div className='Members'>
+			<div className='LayoutBox'>
+				<p className='Title'>Hello Friend!</p>
+				<p className='Subtitle'>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, esse.
+				</p>
+				<button>Sign In</button>
+			</div>
 			<form onSubmit={handleSubmit}>
 				<fieldset>
 					<legend className='h'>회원가입 폼 양식</legend>
@@ -220,7 +227,10 @@ export default function Members() {
 
 							{/* interests */}
 							<tr>
-								<th>선호하는 노래 장르</th>
+								<th>
+									선호하는 <br />
+									노래 장르
+								</th>
 								<td ref={refCheckGroup}>
 									<label htmlFor='Ballade'>발라드</label>
 									<input

@@ -35,8 +35,11 @@
 	}
 
 	.picFrame {
-		width: 100%;
+		width: 80%;
 		opacity: 1;
+		text-align: center;
+		margin: auto;
+		margin-top: 3rem;
 
 		&::after {
 			content: '';

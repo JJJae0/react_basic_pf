@@ -7,7 +7,7 @@ export const fetchFlickr = createAsyncThunk('flickr/request', async (opt) => {
 	const method_interest = 'flickr.interestingness.getList';
 	const method_user = 'flickr.people.getPhotos';
 	const method_search = 'flickr.photos.search';
-	const num = 30;
+	const num = 100;
 
 	if (opt.type === 'interest') {
 		url = `https://www.flickr.com/services/rest/?method=${method_interest}&api_key=${api_key}&per_page=${num}&nojsoncallback=1&format=json`;
@@ -18,7 +18,6 @@ export const fetchFlickr = createAsyncThunk('flickr/request', async (opt) => {
 	if (opt.type === 'search') {
 		url = `https://www.flickr.com/services/rest/?method=${method_search}&api_key=${api_key}&per_page=${num}&nojsoncallback=1&format=json&tags=${opt.tags}`;
 	}
-
 	const result = await axios.get(url);
 	return result.data.photos.photo;
 });
@@ -34,11 +33,11 @@ const flickrSlice = createSlice({
 			state.isLoading = true;
 		},
 		[fetchFlickr.fulfilled]: (state, action) => {
-			state.isLoading = true;
+			state.isLoading = false;
 			state.data = action.payload;
 		},
 		[fetchFlickr.rejected]: (state, action) => {
-			state.isLoading = true;
+			state.isLoading = false;
 			state.data = action.payload;
 		},
 	},

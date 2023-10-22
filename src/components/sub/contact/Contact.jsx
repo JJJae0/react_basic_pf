@@ -178,7 +178,7 @@ export default function Contact() {
 							</span>
 						</div>
 						<div>
-							<span className='upper'>
+							<span className='upperemail'>
 								<label>Email</label>
 								<input type='email' name='user_email' className='emailEl' />
 							</span>
