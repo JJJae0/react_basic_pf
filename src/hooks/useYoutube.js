@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 
 const fetchYoutube = async () => {
-	const api_key = 'AIzaSyDahiuuGjqriZa9DGdl1wIGj_Qi7FmApCE';
+	const api_key = process.env.REACT_APP_YOUTUBE_API;
 	const baseURL = 'https://www.googleapis.com/youtube/v3/playlistItems';
 	const pid = 'PLzWf7Qld-pIvOABZiY6uudaX3a3A61wgB';
 	const num = 4;
@@ -30,8 +30,8 @@ const fetchYoutube = async () => {
 //staleTime을 24시간으로 지정해서 24시간안에는 데이터를 refeching하지 않도록 처리
 export const useYoutubeQuery = () => {
 	return useQuery(['youtubeData'], fetchYoutube, {
-		refetchOnWindowFocus: false,
-		refetchOnMount: false,
+		refetchOnWindowFocus: true,
+		refetchOnMount: true,
 		cacheTime: 1000 * 60 * 60,
 		staleTime: 1000 * 60 * 60,
 	});

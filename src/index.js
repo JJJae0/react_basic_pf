@@ -28,7 +28,6 @@ ReactDOM.render(
 	</BrowserRouter>,
 	document.getElementById('root')
 );
-
 /*
 	1. csr방식에 대해서 설명하시오
 	- Client Side Rendering vs (Server Side Rendering)
