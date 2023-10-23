@@ -5,7 +5,8 @@ import Layout from '../../common/layout/Layout';
 import './Youtube.scss';
 
 export default function Youtube() {
-	const { data: Youtube } = useYoutubeQuery();
+	const { data: Youtube, isSuccess } = useYoutubeQuery();
+
 	return (
 		<>
 			<Layout title={''}>
@@ -29,21 +30,22 @@ export default function Youtube() {
 						</div>
 					</div>
 					<div className='Youtubeapi'>
-						{Youtube.map((data, idx) => {
-							return (
-								<article key={idx}>
-									<div className='picBox'>
-										<Link to={`/detail/${data.id}`}>
-											<img
-												className='Thumbnail'
-												src={data.snippet.thumbnails.standard.url}
-												alt={data.title}
-											/>
-										</Link>
-									</div>
-								</article>
-							);
-						})}
+						{isSuccess &&
+							Youtube.map((data, idx) => {
+								return (
+									<article key={idx}>
+										<div className='picBox'>
+											<Link to={`/detail/${data.id}`}>
+												<img
+													className='Thumbnail'
+													src={data.snippet.thumbnails.standard.url}
+													alt={data.title}
+												/>
+											</Link>
+										</div>
+									</article>
+								);
+							})}
 					</div>
 				</div>
 				);

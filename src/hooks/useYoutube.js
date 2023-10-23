@@ -30,8 +30,8 @@ const fetchYoutube = async () => {
 //staleTime을 24시간으로 지정해서 24시간안에는 데이터를 refeching하지 않도록 처리
 export const useYoutubeQuery = () => {
 	return useQuery(['youtubeData'], fetchYoutube, {
-		refetchOnWindowFocus: true,
-		refetchOnMount: true,
+		refetchOnWindowFocus: false,
+		refetchOnMount: false,
 		cacheTime: 1000 * 60 * 60,
 		staleTime: 1000 * 60 * 60,
 	});
