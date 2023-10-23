@@ -4,7 +4,7 @@ import './Community.scss';
 import { useRef, useState, useEffect } from 'react';
 
 export default function Community() {
-	const dummyData = [
+	const dummyData = useRef([
 		{
 			title: '"의사 수 확대는 필요조건" ‥ 얼마나 늘릴지는 …',
 			content:
@@ -28,11 +28,11 @@ export default function Community() {
 				'서울시 ‘성산시영아파트 재건축 정비계획 및 정비구역 지정·경관심의(안)’ 수정 가결.',
 			data: new Date(),
 		},
-	];
+	]);
 	const getLocalData = () => {
 		const data = localStorage.getItem('post');
 		if (data) return JSON.parse(data);
-		else return dummyData;
+		else return dummyData.current;
 	};
 	const refInput = useRef(null);
 	const refTextarea = useRef(null);
