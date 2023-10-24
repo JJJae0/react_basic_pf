@@ -48,7 +48,6 @@ export default function Youtube() {
 							})}
 					</div>
 				</div>
-				);
 			</Layout>
 		</>
 	);
